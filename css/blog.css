@@ -1,0 +1,43 @@
+/* =========================================================================
+ *  blog.css — Estilos de prosa para artículos (paleta Editorial Cream)
+ *  Las tarjetas de post (.post-card) viven en styles.css y se comparten.
+ * ========================================================================= */
+
+.blog-hero { margin-bottom: 3rem; }
+.blog-hero h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 6vw, 3.4rem); font-weight: 600; letter-spacing: -0.02em; }
+.blog-hero p { color: var(--muted); font-size: 1.15rem; margin-top: 0.6rem; }
+
+.blog-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+.blog-list { display: flex; flex-direction: column; gap: 1.1rem; }
+
+.post-back { display: inline-block; font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); text-decoration: none; }
+.post-back:hover { color: var(--accent-strong); }
+.dark .post-back:hover { color: var(--accent); }
+
+.post-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+.post-header h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; margin: 0.5rem 0; }
+.post-header .sub { color: var(--muted); font-size: 1.15rem; }
+.post-meta { display: flex; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); }
+
+/* ---- Prosa ---- */
+.prose-custom { font-size: 1.12rem; line-height: 1.8; color: var(--ink); }
+.prose-custom h2 { font-family: var(--font-serif); font-size: 1.7rem; font-weight: 500; margin: 2.5rem 0 1rem; }
+.prose-custom h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 500; margin: 1.9rem 0 0.75rem; }
+.prose-custom p { margin: 1.15rem 0; }
+.prose-custom a { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 3px; }
+.dark .prose-custom a { color: var(--accent); }
+.prose-custom ul, .prose-custom ol { margin: 1.15rem 0; padding-left: 1.5rem; }
+.prose-custom ul { list-style: disc; }
+.prose-custom ol { list-style: decimal; }
+.prose-custom li { margin: 0.4rem 0; }
+.prose-custom strong { font-weight: 600; }
+.prose-custom blockquote { border-left: 3px solid var(--accent); padding: 0.25rem 0 0.25rem 1.25rem; margin: 1.5rem 0; color: var(--muted); font-style: italic; font-family: var(--font-serif); }
+.prose-custom code { font-family: var(--font-mono); font-size: 0.88em; background: var(--accent-soft); color: var(--accent-strong); padding: 0.15em 0.4em; border-radius: 0.35rem; }
+.dark .prose-custom code { color: var(--accent-strong); }
+.prose-custom pre { margin: 1.5rem 0; border-radius: 0.75rem; overflow-x: auto; border: 1px solid var(--border); background: #0d1117; }
+.prose-custom pre code { display: block; padding: 1.1rem 1.25rem; background: transparent; color: inherit; font-size: 0.85rem; line-height: 1.6; }
+.prose-custom img { max-width: 100%; border-radius: 0.75rem; margin: 1.5rem 0; }
+.prose-custom hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+.prose-custom table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+.prose-custom th, .prose-custom td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+.prose-custom th { background: var(--accent-soft); font-weight: 600; }

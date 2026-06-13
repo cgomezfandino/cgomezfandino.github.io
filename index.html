@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tato — Carlos E. Gómez Fandiño · Data, IA, música y cosmos</title>
+  <meta name="description" content="Soy Carlos, pero todos me dicen Tato. Ingeniero financiero enamorado de los datos y la IA, founder, guitarrista y curioso del cosmos. Conóceme." />
+  <meta name="author" content="Carlos E. Gómez Fandiño" />
+  <link rel="canonical" href="https://cgomezfandino.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tato — Carlos E. Gómez Fandiño" />
+  <meta property="og:description" content="Data, IA, música y cosmos. Founder y eterno aprendiz. Conóceme." />
+  <meta property="og:url" content="https://cgomezfandino.github.io/" />
+  <meta property="og:image" content="https://cgomezfandino.github.io/assets/img/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Carlos Eduardo Gómez Fandiño",
+    "alternateName": "Tato",
+    "jobTitle": "Data & AI · Founder",
+    "url": "https://cgomezfandino.github.io/",
+    "email": "mailto:cgomezfandino@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" },
+    "nationality": "Colombian",
+    "sameAs": ["https://github.com/cgomezfandino", "https://www.linkedin.com/in/carlosgomezfandino/"],
+    "knowsAbout": ["AI", "Data Engineering", "Entrepreneurship", "Music", "Astrology"]
+  }
+  </script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link" data-i18n="nav.skip">Saltar al contenido</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header id="nav">
+    <div class="wrap nav-inner">
+      <a href="#hero" class="brand" aria-label="Tato — inicio">
+        <svg class="brand-mark" viewBox="0 0 56 56" width="30" height="30" aria-hidden="true">
+          <mask id="brandT"><rect width="56" height="56" fill="#fff"/><rect x="16" y="19" width="24" height="5.2" rx="2.6"/><rect x="25.4" y="19" width="5.2" height="21.5" rx="2.6"/></mask>
+          <circle cx="28" cy="28" r="20" fill="var(--ink)" mask="url(#brandT)"/>
+          <path d="M28 8 A 20 20 0 0 1 45.3 18" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">tato</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#story" class="nav-link" data-i18n="nav.story">Historia</a></li>
+        <li><a href="#passions" class="nav-link" data-i18n="nav.passions">Pasiones</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="nav-tools">
+        <button id="lang-toggle" class="lang-btn" aria-label="Cambiar idioma" data-i18n-aria="a11y.lang" title="ES / EN">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="lang-label">ES</span>
+        </button>
+        <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema" data-i18n-aria="a11y.theme" title="Tema">
+          <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Abrir menú" data-i18n-aria="a11y.menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu">
+      <ul>
+        <li><a href="#story" data-i18n="nav.story">Historia</a></li>
+        <li><a href="#passions" data-i18n="nav.passions">Pasiones</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section id="hero">
+      <div class="hero-deco" aria-hidden="true">
+        <span class="ring r1"></span><span class="ring r2"></span><span class="blob"></span>
+      </div>
+      <div class="wrap hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow"><span data-i18n="hero.greeting">Hola, soy</span></p>
+          <h1 id="hero-name" class="hero-name"></h1>
+          <p class="hero-roleline"><span id="typed" class="hero-role"></span><span class="type-caret">|</span></p>
+          <p id="hero-tagline" class="hero-tagline"></p>
+          <div id="hero-ctas" class="hero-ctas"></div>
+          <div id="hero-socials" class="hero-socials"></div>
+        </div>
+        <div class="reveal">
+          <div class="portrait-wrap">
+            <span class="portrait-frame" aria-hidden="true"></span>
+            <img id="hero-photo" class="portrait" alt="" />
+          </div>
+        </div>
+      </div>
+      <a href="#story" class="scroll-cue" aria-label="Bajar" data-i18n-aria="a11y.scroll">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- ===================== HISTORIA ===================== -->
+    <section id="story" class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">01 — <span data-i18n="section.story">Mi historia</span></p>
+          <h2 id="story-title" class="section-title"></h2>
+          <div class="section-rule"></div>
+        </div>
+        <div id="story-body" class="story reveal"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PASIONES ===================== -->
+    <section id="passions" class="section" style="background:var(--surface-alt)">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">02 — <span data-i18n="section.passions">Lo que me mueve</span></p>
+          <h2 id="passions-title" class="section-title"></h2>
+          <div class="section-rule"></div>
+        </div>
+        <div id="passions-grid" class="passions-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== EN QUÉ ANDO ===================== -->
+    <section id="building" class="section">
+      <div class="wrap">
+        <div class="building-band reveal">
+          <p class="eyebrow">03 — <span data-i18n="section.building">En qué ando</span></p>
+          <h2 id="building-title"></h2>
+          <p id="building-body"></p>
+        </div>
+        <div class="toolbox reveal">
+          <h4 id="toolbox-title"></h4>
+          <div id="toolbox-chips" class="chips"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <section id="projects" class="section" style="background:var(--surface-alt)">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">04 — <span data-i18n="section.projects">Cosas que he construido</span></p>
+          <h2 id="projects-title" class="section-title"></h2>
+          <div class="section-rule"></div>
+        </div>
+        <div id="projects-grid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== BLOG (preview) ===================== -->
+    <section id="blog" class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">05 — <span data-i18n="section.blog">El blog</span></p>
+          <h2 id="blog-title" class="section-title"></h2>
+          <div class="section-rule"></div>
+        </div>
+        <p id="blog-lead" class="blog-lead reveal"></p>
+        <div id="home-posts" class="post-list reveal"></div>
+        <div class="reveal" style="margin-top:2rem">
+          <a href="blog.html" class="btn btn-ghost" id="blog-more"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section id="contact" class="section" style="background:var(--surface-alt)">
+      <div class="wrap contact">
+        <div class="section-head reveal" style="text-align:center">
+          <p class="eyebrow" style="text-align:center">06 — <span data-i18n="section.contact">Contacto</span></p>
+          <h2 id="contact-title" class="section-title"></h2>
+          <div class="section-rule"></div>
+        </div>
+        <p id="contact-lead" class="contact-lead reveal"></p>
+        <div id="contact-links" class="contact-links reveal"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a href="#hero" class="footer-brand" aria-label="Tato — inicio">
+        <svg class="brand-mark" viewBox="0 0 56 56" width="28" height="28" aria-hidden="true">
+          <mask id="footerT"><rect width="56" height="56" fill="#fff"/><rect x="16" y="19" width="24" height="5.2" rx="2.6"/><rect x="25.4" y="19" width="5.2" height="21.5" rx="2.6"/></mask>
+          <circle cx="28" cy="28" r="20" fill="var(--ink)" mask="url(#footerT)"/>
+          <path d="M28 8 A 20 20 0 0 1 45.3 18" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">tato</span>
+      </a>
+      <p class="note" id="footer-note"></p>
+      <div class="footer-socials" id="footer-socials"></div>
+      <p id="footer-copy"></p>
+      <a href="#hero" class="footer-top" id="footer-top"></a>
+    </div>
+  </footer>
+
+  <!-- Project modal -->
+  <div id="project-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <button class="modal-close icon-btn" data-close-modal aria-label="Cerrar" data-i18n-aria="a11y.close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
