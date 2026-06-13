@@ -190,10 +190,10 @@ window.PROFILE = {
     },
     {
       name: { es: "Este mismo sitio", en: "This very site" },
-      subtitle: { es: "Hecho a mano, con vibe coding", en: "Hand-built, with vibe coding" },
+      subtitle: { es: "Planeado y dirigido, con IA", en: "Planned and led, with AI" },
       description: {
-        es: "La página que estás viendo, hecha a mano con HTML, CSS y JavaScript, sin frameworks ni build. Pero la web es solo la punta: lo mío es la ingeniería y la programación de fondo —datos, backends y modelos, de los cuantitativos a los de IA—. Lo construí como construyo todo: pensando como ingeniero, con curiosidad y algo de vibe coding. El código está abierto.",
-        en: "The page you're looking at, hand-built with plain HTML, CSS and JavaScript, no frameworks or build step. But the web is just the surface: my real game is engineering and the programming underneath —data, backends and models, from quant to AI—. I built it the way I build everything: thinking like an engineer, with curiosity and a bit of vibe coding. The code is open.",
+        es: "La página que estás viendo: HTML, CSS y JavaScript, sin frameworks ni build. La construí con IA, pero la gracia no es usarla, sino usarla bien: yo pongo el plan, la arquitectura y el criterio —qué se hace, en qué orden, qué se queda fuera— y gestiono la implementación de principio a fin. Más de liderar un proyecto que de teclear. Y la web es solo la punta: lo mío de fondo es la ingeniería y los modelos, de los cuantitativos a los de IA. El código está abierto.",
+        en: "The page you're looking at: HTML, CSS and JavaScript, no frameworks or build step. I built it with AI —but the point isn't using it, it's using it well: I bring the plan, the architecture and the judgment —what gets done, in what order, what stays out— and manage the implementation end to end. More about leading a project than typing. And the web is just the surface: my real depth is engineering and models, from quant to AI. The code is open.",
       },
       tags: ["Web", "Ingeniería", "Open source"],
       stack: ["Python", "Ingeniería de datos", "Modelos cuantitativos", "IA"],
