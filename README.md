@@ -1,7 +1,7 @@
 # cgomezfandino.github.io
 
 Sitio personal + blog **bilingüe (ES/EN)** de **Carlos E. Gómez Fandiño** ("Tato").
-Sitio **estático** (HTML + CSS + JS escritos a mano, sin frameworks ni build), para **GitHub Pages**.
+Sitio **estático** (HTML + CSS + JS, sin frameworks ni build), **construido con IA (vibe coding)** y dirigido como un proyecto, para **GitHub Pages**.
 Identidad "Editorial Cream" (crema + rojo), tipografía serif Fraunces, modo claro/oscuro.
 
 ## Editar el contenido
