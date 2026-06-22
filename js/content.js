@@ -26,8 +26,8 @@ window.PROFILE = {
     headline: { es: "Carlos E. Gómez Fandiño", en: "Carlos E. Gómez Fandiño" },
     alias: "Tato",
     roles: {
-      es: ["Data & IA", "Founder", "Guitarrista", "Curioso del cosmos", "Constructor de futuros", "Vibe coder"],
-      en: ["Data & AI", "Founder", "Guitar player", "Cosmos-curious", "Future-builder", "Vibe coder"],
+      es: ["Arquitecto de IA & datos", "Data & IA", "Guitarrista", "Curioso del cosmos", "Constructor de futuros", "Vibe coder"],
+      en: ["AI & data architect", "Data & AI", "Guitar player", "Cosmos-curious", "Future-builder", "Vibe coder"],
     },
     tagline: {
       es: "Construyo cosas que antes no existían —con datos, con IA y mucha curiosidad—. Toco la guitarra, miro al cielo más de la cuenta y creo que el futuro es algo que se construye. Si algo de eso te resuena, quédate un rato.",
@@ -50,8 +50,8 @@ window.PROFILE = {
         en: "I trained as a financial engineer, but I fell just as hard for business and for programming. I always sensed those two worlds would eventually meet and, together, make life simpler. That same itch to automate the tedious pushed me across the ocean —from finance to data, from Bogotá to Madrid— to do a master's in Big Data & Business Analytics.",
       },
       {
-        es: "Durante años le enseñé a las máquinas a encontrar orden en el caos, a convertir montañas de datos en una sola decisión clara. Pero nunca me quedé con el modelo: me quedo con ese instante en que algo confuso, de pronto, tiene sentido. Hoy cierro ese capítulo y abro una página en blanco, con más ganas que nunca de construir lo mío.",
-        en: "For years I taught machines to find order in chaos, to turn mountains of data into a single clear decision. But I never kept the model; I keep the moment when something confusing suddenly makes sense. Today I'm closing that chapter and opening a blank page, more eager than ever to build something of my own.",
+        es: "Durante años le enseñé a las máquinas a encontrar orden en el caos, a convertir montañas de datos en una sola decisión clara. Pero nunca me quedé con el modelo: me quedo con ese instante en que algo confuso, de pronto, tiene sentido. Hoy cierro ese capítulo y abro una página en blanco, con más ganas que nunca de construir lo que viene.",
+        en: "For years I taught machines to find order in chaos, to turn mountains of data into a single clear decision. But I never kept the model; I keep the moment when something confusing suddenly makes sense. Today I'm closing that chapter and opening a blank page, more eager than ever to build what comes next.",
       },
       {
         es: "Me mueve la inteligencia artificial por todo lo que nos deja crear, y esa misma terquedad de los pioneros por reinventar desde cero y mirar al futuro —y al espacio— sin pedir permiso. Y cuando levanto la vista, el universo me recuerda lo pequeños y lo posibles que somos a la vez. Entre todo eso, siempre, la guitarra cerca. Esto no es un currículum: es un lienzo. Si algo de aquí te resuena, quédate.",
@@ -126,18 +126,18 @@ window.PROFILE = {
       },
       {
         icon: "rocket",
-        title: { es: "Emprender", en: "Building things" },
+        title: { es: "Construir de cero", en: "Building from zero" },
         body: {
-          es: "Lo que de verdad me prende es llevar una idea de la servilleta a producción, con usuarios reales del otro lado. Me gusta el caos honesto de empezar de cero, equivocarme rápido y ver algo cobrar vida. Por eso lancé Astro Soul y por eso ando metido en lo nuevo: no hay nada como ver a alguien usar algo que salió de tu cabeza.",
-          en: "What really lights me up is taking an idea from napkin to production, with real users on the other side. I like the honest chaos of starting from zero, getting it wrong fast, and watching something come to life. It's why I launched Astro Soul, and why I'm deep in what's next: there's nothing like seeing someone use something that came out of your head.",
+          es: "Lo que de verdad me prende es llevar una idea de la servilleta a producción, con usuarios reales del otro lado. Me gusta el caos honesto de empezar de cero, equivocarme rápido y ver algo cobrar vida —de la arquitectura al primer usuario—. No hay nada como ver a alguien usar algo que ayudaste a construir.",
+          en: "What really lights me up is taking an idea from napkin to production, with real users on the other side. I like the honest chaos of starting from zero, getting it wrong fast, and watching something come to life —from the architecture to the first user. There's nothing like seeing someone use something you helped build.",
         },
       },
       {
         icon: "moon-stars",
         title: { es: "Astrología", en: "Astrology" },
         body: {
-          es: "La astrología me atrapa por lo que dice de cada persona, no por el cielo en abstracto: una de las formas más antiguas de entender quiénes somos por dentro y qué nos mueve. No la tomo como dogma ni como adivinación, sino como un mapa para mirarse hacia dentro. Esa curiosidad terminó convirtiéndose en Astro Soul, donde junto mi lado técnico con el más humano.",
-          en: "What pulls me into astrology is what it says about each person, not the sky in the abstract: one of the oldest ways of understanding who we are inside and what moves us. I don't take it as dogma or fortune-telling, but as a map for looking inward. That curiosity ended up becoming Astro Soul, where I bring my technical side together with my more human one.",
+          es: "La astrología me atrapa por lo que dice de cada persona, no por el cielo en abstracto: una de las formas más antiguas de entender quiénes somos por dentro y qué nos mueve. No la tomo como dogma ni como adivinación, sino como un mapa para mirarse hacia dentro. Esa misma curiosidad inspiró Astro Soul, un proyecto donde junto mi lado técnico con el más humano.",
+          en: "What pulls me into astrology is what it says about each person, not the sky in the abstract: one of the oldest ways of understanding who we are inside and what moves us. I don't take it as dogma or fortune-telling, but as a map for looking inward. That same curiosity inspired Astro Soul, a project where I bring my technical side together with my more human one.",
         },
       },
     ],
@@ -147,8 +147,8 @@ window.PROFILE = {
   building: {
     title: { es: "En qué ando ahora", en: "What I'm building now" },
     body: {
-      es: "Ahora mismo estoy de lleno en Astro Soul Center, un producto de IA de astrología y bienestar pensado para el público hispanohablante de LATAM y más allá: una forma cálida y personal de acercarse al cosmos, donde mi obsesión por las estrellas y mi oficio de datos por fin se dan la mano. Y, en paralelo, hay algo nuevo en fintech que aún no puedo contar. Cuando llegue el momento, serás de los primeros en saberlo.",
-      en: "Right now I'm all in on Astro Soul Center, an astrology and wellness AI product made for Spanish-speaking audiences across LATAM and beyond: a warm, personal way to connect with the cosmos, where my obsession with the stars and my data craft finally shake hands. And in parallel, there's something new in fintech I can't talk about yet. When the time comes, you'll be among the first to know.",
+      es: "Ahora mismo estoy de lleno construyendo productos de IA de punta a punta: de la arquitectura de datos al modelo, y del modelo a la primera persona que lo usa. Dos de ellos —Astro Soul Center, IA + astrología para el público hispano, y Containeer, analítica de informes financieros para capital markets— me tienen explorando los dos extremos del espectro: lo más humano y lo más institucional. Los tienes un poco más abajo.",
+      en: "Right now I'm deep in building end-to-end AI products: from the data architecture to the model, and from the model to the first person who uses it. Two of them —Astro Soul Center, AI + astrology for Spanish-speaking audiences, and Containeer, financial-reports analytics for capital markets— have me exploring both ends of the spectrum: the most human and the most institutional. You'll find them just below.",
     },
   },
 
@@ -166,13 +166,25 @@ window.PROFILE = {
   projects: [
     {
       name: { es: "Astro Soul Center", en: "Astro Soul Center" },
-      subtitle: { es: "Mi producto de IA + astrología", en: "My astrology + AI product" },
+      subtitle: { es: "Plataforma de IA B2C, de punta a punta", en: "End-to-end B2C AI platform" },
       description: {
-        es: "Plataforma B2C donde la IA personaliza la experiencia astrológica: cartas natales, guía diaria e interpretación a tu medida. Aquí se juntan mi lado técnico y mi fascinación por el cosmos. Pensada para el público hispanohablante.",
-        en: "A B2C platform where AI personalizes the astrology experience: natal charts, daily guidance and tailor-made interpretation. This is where my technical side meets my fascination with the cosmos. Built for Spanish-speaking audiences.",
+        es: "Proyecto end-to-end: una plataforma B2C donde la IA personaliza la experiencia astrológica —cartas natales, guía diaria e interpretación a medida— para el público hispanohablante. Diseñé y construí todo el recorrido: arquitectura de datos en PostgreSQL + pgvector, personalización con LLMs e inyección de contexto, y despliegue multi-región pensado para crecer. Donde mi lado técnico se da la mano con la fascinación por el cosmos.",
+        en: "An end-to-end project: a B2C platform where AI personalizes the astrology experience —natal charts, daily guidance and tailor-made interpretation— for Spanish-speaking audiences. I designed and built the whole journey: data architecture on PostgreSQL + pgvector, LLM personalization with context injection, and a multi-region deployment built to scale. Where my technical side shakes hands with my fascination for the cosmos.",
       },
-      tags: ["Founder", "IA", "Producto"],
-      stack: ["Next.js", "Supabase", "pgvector", "LLMs"],
+      tags: ["IA", "End-to-end", "RAG"],
+      stack: ["Next.js", "PostgreSQL / pgvector", "LLMs", "AWS"],
+      links: {},
+      featured: true,
+    },
+    {
+      name: { es: "Containeer", en: "Containeer" },
+      subtitle: { es: "Fintech B2B: informes financieros → analítica", en: "B2B fintech: financial reports → analytics" },
+      description: {
+        es: "Proyecto end-to-end que transforma informes financieros y memorias anuales de empresas en analítica de grado institucional para capital markets: posicionamiento de competidores, rotación sectorial y tendencias de inversión, sin parseo manual. Diseñé y construí toda la cadena: un pipeline que ingiere y normaliza esos informes en ciclo semanal, entity-resolution sobre cadenas de propiedad complejas (matching probabilístico + verificación con LLM) y un Asset Explorer con capa geográfica y sectorial. La inteligencia corre sobre una capa de IA con Claude.",
+        en: "An end-to-end project that turns companies' financial and annual reports into institutional-grade analytics for capital markets: competitor positioning, sector rotation and investment trends, with no manual parsing. I designed and built the whole chain: a pipeline that ingests and normalizes those reports on a weekly cycle, entity resolution over complex ownership chains (probabilistic matching + LLM verification), and an Asset Explorer with geographic and sector layers. The intelligence runs on an AI layer powered by Claude.",
+      },
+      tags: ["Fintech", "IA", "Entity resolution"],
+      stack: ["Next.js", "PostgreSQL", "DuckDB", "Splink", "MCP", "Claude API"],
       links: {},
       featured: true,
     },
