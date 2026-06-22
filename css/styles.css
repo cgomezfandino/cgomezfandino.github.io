@@ -160,7 +160,13 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 @keyframes bounce { 0%,100% { transform: translate(-50%,0); } 50% { transform: translate(-50%,8px); } }
 
 /* ---- Sections ---- */
-.section { padding: 5.5rem 0; }
+.section { padding: 5.5rem 0; position: relative; }
+/* Separador de sección — arco (corona del logo) */
+.sep-arc { position: absolute; top: 0; left: 0; width: 100%; line-height: 0; transform: translateY(-99%); pointer-events: none; }
+.sep-arc svg { display: block; width: 100%; height: clamp(2rem, 4vw, 3.25rem); }
+.sep-arc .sep-fill { fill: var(--bg); }
+.sep-arc--alt .sep-fill { fill: var(--surface-alt); }
+.sep-arc .sep-line { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0.8; vector-effect: non-scaling-stroke; }
 .section-head { margin-bottom: 2.5rem; }
 .section-title { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 500; letter-spacing: -0.01em; margin-top: 0.5rem; }
 .section-rule { width: 48px; height: 3px; background: var(--accent); border-radius: 2px; margin-top: 1rem; }
