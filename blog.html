@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="css/styles.css?v=1" />
+  <link rel="stylesheet" href="css/blog.css?v=1" />
 </head>
 <body>
   <a href="#main" class="skip-link" data-i18n="nav.skip">Saltar al contenido</a>
@@ -57,9 +57,11 @@
     </div>
   </header>
 
-  <main id="main" class="wrap" style="padding-top:7rem;padding-bottom:5rem;max-width:48rem">
+  <main id="main" class="blog-main">
     <header class="blog-hero">
+      <p class="eyebrow" data-i18n="blog.eyebrow">Bitácora</p>
       <h1 data-i18n="blog.title">El blog</h1>
+      <div class="section-rule"></div>
       <p data-i18n="blog.subtitle">Notas sin corbata sobre IA, datos, producto y alguna idea suelta.</p>
     </header>
     <div id="blog-filters" class="blog-filters"></div>
@@ -74,7 +76,7 @@
     </div>
   </footer>
 
-  <script src="js/content.js"></script>
-  <script src="js/blog.js"></script>
+  <script src="js/content.js?v=1"></script>
+  <script src="js/blog.js?v=1"></script>
 </body>
 </html>

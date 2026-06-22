@@ -81,10 +81,10 @@
         list.innerHTML = "";
         const shown = posts.filter((p) => active === "__all__" || (p.tags || []).includes(active));
         if (!shown.length) { list.innerHTML = `<p style="color:var(--muted)">${esc(tt("blog.empty"))}</p>`; return; }
-        shown.forEach((p) => {
+        shown.forEach((p, i) => {
           const card = document.createElement("a");
           card.href = "post.html?slug=" + encodeURIComponent(p.slug);
-          card.className = "post-card";
+          card.className = "post-card" + (i === 0 && active === "__all__" ? " post-card--feature" : "");
           const tagsHtml = (p.tags || []).map((tg) => `<span class="badge">${esc(tg)}</span>`).join(" ");
           card.innerHTML =
             `<div class="post-meta"><time datetime="${esc(p.date)}">${esc(fmtDate(p.date))}</time>${p.readingTime ? `<span>· ${esc(p.readingTime)}</span>` : ""}</div>
@@ -125,9 +125,11 @@
       document.title = (meta.title || slug) + " — Tato";
       const tagsHtml = (Array.isArray(meta.tags) ? meta.tags : []).map((tg) => `<span class="badge">${esc(tg)}</span>`).join(" ");
       header.innerHTML =
-        `<div class="post-meta">${meta.date ? `<time datetime="${esc(meta.date)}">${esc(fmtDate(meta.date))}</time>` : ""}${meta.readingTime ? `<span>· ${esc(meta.readingTime)}</span>` : ""}</div>
+        `<p class="eyebrow">${esc(tt("blog.eyebrow"))}</p>
+         <div class="post-meta">${meta.date ? `<time datetime="${esc(meta.date)}">${esc(fmtDate(meta.date))}</time>` : ""}${meta.readingTime ? `<span>· ${esc(meta.readingTime)}</span>` : ""}</div>
          <h1>${esc(meta.title || slug)}</h1>
          ${meta.subtitle ? `<p class="sub">${esc(meta.subtitle)}</p>` : ""}
+         <div class="section-rule" style="margin:.9rem 0 0"></div>
          <div style="margin-top:1rem">${tagsHtml}</div>`;
       if (window.marked) {
         marked.setOptions({ breaks: false, gfm: true });
