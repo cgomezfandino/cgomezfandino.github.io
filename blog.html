@@ -65,8 +65,10 @@
       <p class="reveal" style="transition-delay:180ms" data-i18n="blog.subtitle">Notas sin corbata sobre IA, datos, producto y alguna idea suelta.</p>
     </header>
     <div id="blog-filters" class="blog-filters"></div>
-    <div id="blog-list" class="blog-list">
-      <p style="color:var(--muted)" data-i18n="blog.loading">Cargando…</p>
+    <p id="blog-count" class="blog-count" aria-hidden="true"></p>
+    <div id="blog-list" class="blog-list" role="status">
+      <div class="post-card post-card--skeleton" aria-hidden="true"><span class="skeleton-line" style="width:42%"></span><span class="skeleton-line skeleton-line--title"></span><span class="skeleton-line" style="width:80%"></span><span class="skeleton-line" style="width:60%"></span></div>
+      <div class="post-card post-card--skeleton" aria-hidden="true"><span class="skeleton-line" style="width:38%"></span><span class="skeleton-line skeleton-line--title"></span><span class="skeleton-line" style="width:75%"></span><span class="skeleton-line" style="width:55%"></span></div>
     </div>
   </main>
 
