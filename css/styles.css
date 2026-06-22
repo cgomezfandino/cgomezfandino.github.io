@@ -103,10 +103,10 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
 .nav-tools { display: flex; align-items: center; gap: 0.5rem; }
-.icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 2.4rem; height: 2.4rem; border-radius: 0.6rem; color: var(--muted); background: transparent; border: none; cursor: pointer; transition: background 0.2s, color 0.2s; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: 0.6rem; color: var(--muted); background: transparent; border: none; cursor: pointer; transition: background 0.2s, color 0.2s; }
 .icon-btn:hover { background: var(--accent-soft); color: var(--accent-strong); }
 .dark .icon-btn:hover { color: var(--accent); }
-.lang-btn { display: inline-flex; align-items: center; gap: 0.35rem; height: 2.4rem; padding: 0 0.7rem; border-radius: 0.6rem; font-family: var(--font-mono); font-size: 0.76rem; font-weight: 500; letter-spacing: 0.04em; color: var(--muted); background: transparent; border: 1px solid var(--border); cursor: pointer; transition: all 0.2s; }
+.lang-btn { display: inline-flex; align-items: center; gap: 0.35rem; height: 2.75rem; padding: 0 0.7rem; border-radius: 0.6rem; font-family: var(--font-mono); font-size: 0.76rem; font-weight: 500; letter-spacing: 0.04em; color: var(--muted); background: transparent; border: 1px solid var(--border); cursor: pointer; transition: all 0.2s; }
 .lang-btn:hover { background: var(--accent-soft); color: var(--accent-strong); border-color: var(--accent); }
 .dark .lang-btn:hover { color: var(--accent); }
 .menu-btn { display: inline-flex; }
@@ -241,22 +241,26 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .blog-lead { max-width: var(--prose); color: var(--muted); font-size: 1.12rem; margin-bottom: 2rem; }
 .post-list { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .post-list { grid-template-columns: 1fr 1fr; } }
-.post-card { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 1.1rem; padding: 1.5rem 1.6rem; text-decoration: none; color: inherit; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
+.post-card { display: block; position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 1.1rem; padding: 1.5rem 1.6rem; text-decoration: none; color: inherit; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
 .post-card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 14px 32px color-mix(in srgb, var(--accent) 12%, transparent); }
 .post-meta { display: flex; gap: 0.6rem; font-size: 0.85rem; color: var(--muted); font-family: var(--font-mono); margin-bottom: 0.6rem; }
 .post-card-title { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 500; line-height: 1.25; }
 .post-card:hover .post-card-title { color: var(--accent-strong); }
 .dark .post-card:hover .post-card-title { color: var(--accent); }
 .post-card-excerpt { margin: 0.5rem 0 0; color: var(--muted); line-height: 1.6; font-size: .95rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.post-card-go { position: absolute; right: 1.5rem; bottom: 1.25rem; font-family: var(--font-mono); color: var(--accent-strong); opacity: 0; transform: translateX(-4px); transition: opacity 0.25s, transform 0.25s; }
+.dark .post-card-go { color: var(--accent); }
+.post-card:hover .post-card-go { opacity: 1; transform: none; }
 
 /* ---- Badges/tags ---- */
 .badge { display: inline-block; font-family: var(--font-mono); font-size: 0.72rem; padding: 0.22rem 0.55rem; border-radius: 0.4rem; background: var(--accent-soft); color: var(--accent-strong); border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); }
 .dark .badge { color: var(--accent-strong); }
 
 /* ---- Filtros (chips) usados en el blog ---- */
-.chip { padding: 0.4rem 0.9rem; border-radius: 999px; font-size: 0.85rem; font-weight: 500; border: 1px solid var(--border); color: var(--muted); background: transparent; cursor: pointer; transition: all 0.2s; }
+.chip { min-height: 2.75rem; display: inline-flex; align-items: center; padding: 0 0.95rem; border-radius: 999px; font-size: 0.85rem; font-weight: 500; border: 1px solid var(--border); color: var(--muted); background: transparent; cursor: pointer; transition: all 0.2s; }
 .chip:hover { border-color: var(--accent); }
 .chip.active { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.chip:active { transform: scale(0.96); }
 
 /* ---- Contacto ---- */
 .contact { max-width: 40rem; margin: 0 auto; text-align: center; }

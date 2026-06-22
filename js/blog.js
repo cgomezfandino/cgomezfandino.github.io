@@ -14,6 +14,17 @@
   if (LANG !== "es" && LANG !== "en") LANG = "es";
   const tt = (k) => (UI[LANG] && UI[LANG][k]) || (UI.es && UI.es[k]) || k;
 
+  const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function revealIn(container) {
+    if (!container) return;
+    const items = $$(".reveal", container);
+    if (REDUCED) { items.forEach((el) => el.classList.add("visible")); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    items.forEach((el) => io.observe(el));
+  }
+
   function applyI18n() {
     document.documentElement.lang = LANG;
     $$("[data-i18n]").forEach((n) => { const k = n.getAttribute("data-i18n"); if (UI[LANG] && UI[LANG][k] != null) n.textContent = UI[LANG][k]; });
@@ -70,6 +81,9 @@
   /* ---- Índice ---- */
   async function renderBlogList() {
     const list = $("#blog-list"), filters = $("#blog-filters");
+    filters.setAttribute("role", "group");
+    filters.setAttribute("aria-label", tt("a11y.filters"));
+    list.setAttribute("aria-live", "polite");
     try {
       const res = await fetch("posts/index.json", { cache: "no-cache" });
       if (!res.ok) throw new Error("HTTP " + res.status);
@@ -84,22 +98,35 @@
         shown.forEach((p, i) => {
           const card = document.createElement("a");
           card.href = "post.html?slug=" + encodeURIComponent(p.slug);
-          card.className = "post-card" + (i === 0 && active === "__all__" ? " post-card--feature" : "");
+          const isFeature = (i === 0 && active === "__all__") || shown.length === 1;
+          card.className = "post-card reveal" + (isFeature ? " post-card--feature" : "");
+          card.style.transitionDelay = Math.min(i * 70, 280) + "ms";
           const tagsHtml = (p.tags || []).map((tg) => `<span class="badge">${esc(tg)}</span>`).join(" ");
           card.innerHTML =
             `<div class="post-meta"><time datetime="${esc(p.date)}">${esc(fmtDate(p.date))}</time>${p.readingTime ? `<span>· ${esc(p.readingTime)}</span>` : ""}</div>
              <h2 class="post-card-title">${esc(p.title)}</h2>
              <p class="post-card-excerpt">${esc(p.excerpt || "")}</p>
-             <div style="margin-top:.7rem">${tagsHtml}</div>`;
+             <div style="margin-top:.7rem">${tagsHtml}</div>
+             <span class="post-card-go" aria-hidden="true">→</span>`;
           list.appendChild(card);
         });
+        revealIn(list);
       };
       filters.innerHTML = "";
       [{ value: "__all__", label: tt("filter.all") }, ...tags.map((tg) => ({ value: tg, label: tg }))].forEach((d) => {
         const chip = document.createElement("button");
         chip.className = "chip" + (d.value === active ? " active" : "");
         chip.textContent = d.label; chip.dataset.filter = d.value;
-        chip.addEventListener("click", () => { active = d.value; $$(".chip", filters).forEach((c) => c.classList.toggle("active", c.dataset.filter === active)); draw(); });
+        chip.setAttribute("aria-pressed", String(d.value === active));
+        chip.addEventListener("click", () => {
+          active = d.value;
+          $$(".chip", filters).forEach((c) => {
+            const on = c.dataset.filter === active;
+            c.classList.toggle("active", on);
+            c.setAttribute("aria-pressed", String(on));
+          });
+          draw();
+        });
         filters.appendChild(chip);
       });
       draw();
@@ -125,12 +152,13 @@
       document.title = (meta.title || slug) + " — Tato";
       const tagsHtml = (Array.isArray(meta.tags) ? meta.tags : []).map((tg) => `<span class="badge">${esc(tg)}</span>`).join(" ");
       header.innerHTML =
-        `<p class="eyebrow">${esc(tt("blog.eyebrow"))}</p>
-         <div class="post-meta">${meta.date ? `<time datetime="${esc(meta.date)}">${esc(fmtDate(meta.date))}</time>` : ""}${meta.readingTime ? `<span>· ${esc(meta.readingTime)}</span>` : ""}</div>
-         <h1>${esc(meta.title || slug)}</h1>
-         ${meta.subtitle ? `<p class="sub">${esc(meta.subtitle)}</p>` : ""}
-         <div class="section-rule" style="margin:.9rem 0 0"></div>
-         <div style="margin-top:1rem">${tagsHtml}</div>`;
+        `<p class="eyebrow reveal">${esc(tt("blog.eyebrow"))}</p>
+         <div class="post-meta reveal" style="transition-delay:60ms">${meta.date ? `<time datetime="${esc(meta.date)}">${esc(fmtDate(meta.date))}</time>` : ""}${meta.readingTime ? `<span>· ${esc(meta.readingTime)}</span>` : ""}</div>
+         <h1 class="reveal" style="transition-delay:120ms">${esc(meta.title || slug)}</h1>
+         ${meta.subtitle ? `<p class="sub reveal" style="transition-delay:180ms">${esc(meta.subtitle)}</p>` : ""}
+         <div class="section-rule reveal" style="transition-delay:220ms;margin:.9rem 0 0"></div>
+         <div class="reveal" style="transition-delay:260ms;margin-top:1rem">${tagsHtml}</div>`;
+      revealIn(header);
       if (window.marked) {
         marked.setOptions({ breaks: false, gfm: true });
         content.innerHTML = marked.parse(body);
@@ -146,6 +174,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     setupChrome();
+    revealIn($(".blog-hero"));
     if ($("#blog-list")) renderBlogList();
     if ($("#post-content")) renderPost();
   });
