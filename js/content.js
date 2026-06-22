@@ -88,8 +88,8 @@ window.PROFILE = {
         icon: "music",
         title: { es: "Música y guitarra", en: "Music & guitar" },
         body: {
-          es: "Toco la guitarra desde niño y nunca la he soltado. Para mí no es un hobby: es donde ordeno la cabeza y bajo revoluciones cuando todo va demasiado rápido. Casi siempre llevo una canción sonándome por dentro.",
-          en: "I've played guitar since I was a kid and never put it down. For me it's not a hobby: it's where I clear my head and slow down when everything's moving too fast. There's almost always a song playing somewhere in me.",
+          es: "Toco la guitarra desde joven y nunca la he soltado. Para mí no es un hobby: es donde ordeno la cabeza y bajo revoluciones cuando todo va demasiado rápido. Casi siempre llevo una canción sonándome por dentro.",
+          en: "I've played guitar since I was young and never put it down. For me it's not a hobby: it's where I clear my head and slow down when everything's moving too fast. There's almost always a song playing somewhere in me.",
         },
       },
       {
