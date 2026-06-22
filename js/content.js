@@ -147,8 +147,8 @@ window.PROFILE = {
   building: {
     title: { es: "En qué ando ahora", en: "What I'm building now" },
     body: {
-      es: "Ahora mismo estoy de lleno construyendo productos de IA de punta a punta: de la arquitectura de datos al modelo, y del modelo a la primera persona que lo usa. Dos de ellos —Astro Soul Center, IA + astrología para el público hispano, y Containeer, analítica de informes financieros para capital markets— me tienen explorando los dos extremos del espectro: lo más humano y lo más institucional. Los tienes un poco más abajo.",
-      en: "Right now I'm deep in building end-to-end AI products: from the data architecture to the model, and from the model to the first person who uses it. Two of them —Astro Soul Center, AI + astrology for Spanish-speaking audiences, and Containeer, financial-reports analytics for capital markets— have me exploring both ends of the spectrum: the most human and the most institutional. You'll find them just below.",
+      es: "Ahora mismo estoy de lleno construyendo productos de IA de punta a punta: de la arquitectura de datos al modelo, y del modelo a la primera persona que lo usa. Dos de ellos —Astro Soul Center, IA + astrología para el público hispano, y Containeer, inteligencia de inversión institucional para capital markets— me tienen explorando los dos extremos del espectro: lo más humano y lo más institucional. Los tienes un poco más abajo.",
+      en: "Right now I'm deep in building end-to-end AI products: from the data architecture to the model, and from the model to the first person who uses it. Two of them —Astro Soul Center, AI + astrology for Spanish-speaking audiences, and Containeer, institutional investment intelligence for capital markets— have me exploring both ends of the spectrum: the most human and the most institutional. You'll find them just below.",
     },
   },
 
@@ -168,8 +168,8 @@ window.PROFILE = {
       name: { es: "Astro Soul Center", en: "Astro Soul Center" },
       subtitle: { es: "Plataforma de IA B2C, de punta a punta", en: "End-to-end B2C AI platform" },
       description: {
-        es: "Proyecto end-to-end: una plataforma B2C donde la IA personaliza la experiencia astrológica —cartas natales, guía diaria e interpretación a medida— para el público hispanohablante. Diseñé y construí todo el recorrido: arquitectura de datos en PostgreSQL + pgvector, personalización con LLMs e inyección de contexto, y despliegue multi-región pensado para crecer. Donde mi lado técnico se da la mano con la fascinación por el cosmos.",
-        en: "An end-to-end project: a B2C platform where AI personalizes the astrology experience —natal charts, daily guidance and tailor-made interpretation— for Spanish-speaking audiences. I designed and built the whole journey: data architecture on PostgreSQL + pgvector, LLM personalization with context injection, and a multi-region deployment built to scale. Where my technical side shakes hands with my fascination for the cosmos.",
+        es: "Una plataforma B2C donde la IA hace la astrología algo personal: cartas natales, guía diaria e interpretación a la medida de cada persona, para el público hispanohablante. La pensé y la construí de principio a fin —de la idea a la experiencia que la gente usa cada día—: una forma cálida y cercana de mirarse hacia dentro y reconectar con el cosmos. Donde mi lado técnico se da la mano con mi fascinación por el universo.",
+        en: "A B2C platform where AI makes astrology personal: natal charts, daily guidance and interpretation tailored to each person, for Spanish-speaking audiences. I imagined and built it end to end —from the first idea to the experience people use every day—: a warm, close way to look inward and reconnect with the cosmos. Where my technical side shakes hands with my fascination for the universe.",
       },
       tags: ["IA", "End-to-end", "RAG"],
       stack: ["Next.js", "PostgreSQL / pgvector", "LLMs", "AWS"],
@@ -178,10 +178,10 @@ window.PROFILE = {
     },
     {
       name: { es: "Containeer", en: "Containeer" },
-      subtitle: { es: "Fintech B2B: informes financieros → analítica", en: "B2B fintech: financial reports → analytics" },
+      subtitle: { es: "Fintech B2B: inteligencia de inversión institucional", en: "B2B fintech: institutional investment intelligence" },
       description: {
-        es: "Proyecto end-to-end que transforma informes financieros y memorias anuales de empresas en analítica de grado institucional para capital markets: posicionamiento de competidores, rotación sectorial y tendencias de inversión, sin parseo manual. Diseñé y construí toda la cadena: un pipeline que ingiere y normaliza esos informes en ciclo semanal, entity-resolution sobre cadenas de propiedad complejas (matching probabilístico + verificación con LLM) y un Asset Explorer con capa geográfica y sectorial. La inteligencia corre sobre una capa de IA con Claude.",
-        en: "An end-to-end project that turns companies' financial and annual reports into institutional-grade analytics for capital markets: competitor positioning, sector rotation and investment trends, with no manual parsing. I designed and built the whole chain: a pipeline that ingests and normalizes those reports on a weekly cycle, entity resolution over complex ownership chains (probabilistic matching + LLM verification), and an Asset Explorer with geographic and sector layers. The intelligence runs on an AI layer powered by Claude.",
+        es: "Proyecto end-to-end que convierte las divulgaciones públicas de los grandes inversores institucionales en analítica de grado institucional para capital markets: qué están comprando, vendiendo y hacia dónde rotan, posicionamiento de competidores, rotación sectorial y trayectoria de AUM —sin parseo manual—. Diseñé y construí toda la cadena: un pipeline que ingiere y normaliza esos datos en ciclo semanal, entity-resolution sobre cadenas de propiedad de fondos complejas (matching probabilístico + verificación con LLM) y un Asset Explorer con capa geográfica y sectorial. La inteligencia corre sobre una capa de IA con Claude.",
+        en: "An end-to-end project that turns the public disclosures of large institutional investors into institutional-grade analytics for capital markets: what they're buying, selling and rotating into, competitor positioning, sector rotation and AUM trajectory —with no manual parsing. I designed and built the whole chain: a pipeline that ingests and normalizes that data on a weekly cycle, entity resolution over complex fund ownership chains (probabilistic matching + LLM verification), and an Asset Explorer with geographic and sector layers. The intelligence runs on an AI layer powered by Claude.",
       },
       tags: ["Fintech", "IA", "Entity resolution"],
       stack: ["Next.js", "PostgreSQL", "DuckDB", "Splink", "MCP", "Claude API"],
