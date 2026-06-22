@@ -30,8 +30,8 @@ window.PROFILE = {
       en: ["AI & data architect", "Data & AI", "Guitar player", "Cosmos-curious", "Future-builder", "Vibe coder"],
     },
     tagline: {
-      es: "Construyo cosas que antes no existían —con datos, con IA y mucha curiosidad—. Toco la guitarra, miro al cielo más de la cuenta y creo que el futuro es algo que se construye. Si algo de eso te resuena, quédate un rato.",
-      en: "I build things that didn't exist yet —with data, with AI, and a lot of curiosity—. I play guitar, look up at the sky more than I should, and believe the future is something you build. If any of that resonates, stay a while.",
+      es: "Construyo cosas que antes no existían —con datos, IA y mucha curiosidad—. Toco la guitarra, miro al cielo más de la cuenta y estoy convencido de que el futuro se construye, no se espera. Si algo de esto te suena, quédate — creo que nos vamos a llevar bien.",
+      en: "I build things that didn't exist yet —with data, AI and a lot of curiosity—. I play guitar, look up at the sky more than I should, and I'm convinced the future is built, not awaited. If any of this clicks, stick around — I think we'll get along.",
     },
     primaryCta: { es: "Mi historia", en: "My story" },
     secondaryCta: { es: "Hablemos", en: "Let's talk" },
@@ -88,8 +88,8 @@ window.PROFILE = {
         icon: "music",
         title: { es: "Música y guitarra", en: "Music & guitar" },
         body: {
-          es: "Toco la guitarra desde joven y nunca la he soltado. Para mí no es un hobby: es donde ordeno la cabeza y bajo revoluciones cuando todo va demasiado rápido. Casi siempre llevo una canción sonándome por dentro.",
-          en: "I've played guitar since I was young and never put it down. For me it's not a hobby: it's where I clear my head and slow down when everything's moving too fast. There's almost always a song playing somewhere in me.",
+          es: "Toco la guitarra desde joven y no la suelto. No es un hobby: es mi forma de relajarme y desconectar cuando todo va demasiado rápido. Casi siempre llevo una canción sonándome por dentro.",
+          en: "I've played guitar since I was young and I don't put it down. It's not a hobby: it's how I relax and switch off when everything's moving too fast. There's almost always a song playing somewhere in me.",
         },
       },
       {
@@ -227,8 +227,8 @@ window.PROFILE = {
   contactSection: {
     title: { es: "Escríbeme", en: "Get in touch" },
     lead: {
-      es: "Me encanta conocer gente y conversar sin agenda: datos e IA, una buena idea de producto, música, astrología, o simplemente la curiosidad de ver qué podríamos construir juntos. Si llegaste hasta aquí, escríbeme. Respondo de verdad.",
-      en: "I love meeting people and talking with no agenda: data and AI, a good product idea, music, astrology, or just the curiosity of seeing what we could build together. If you made it this far, write to me. I actually write back.",
+      es: "Me encanta conocer gente y conversar sin agenda: datos e IA, una buena idea de producto, música, astrología, o simplemente ver qué podríamos construir juntos. Si llegaste hasta aquí, lánzate y escríbeme — respondo de verdad (y no soy un bot).",
+      en: "I love meeting people and talking with no agenda: data and AI, a good product idea, music, astrology, or just seeing what we could build together. If you made it this far, go ahead and write — I actually write back (and I'm not a bot).",
     },
   },
 
