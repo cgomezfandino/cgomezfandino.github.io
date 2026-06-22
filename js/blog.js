@@ -162,6 +162,12 @@
       if (!res.ok) throw new Error("HTTP " + res.status);
       let posts = await res.json();
       posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+      if (!posts.length) {
+        filters.innerHTML = "";
+        const countEl = $("#blog-count"); if (countEl) countEl.textContent = "";
+        list.innerHTML = `<div class="post-card" style="grid-column:1/-1;text-align:center"><p style="color:var(--muted);margin:0">${esc(tt("blog.soon"))}</p></div>`;
+        return;
+      }
       const tags = [...new Set(posts.flatMap((p) => p.tags || []))];
       const urlTag = new URLSearchParams(location.search).get("tag");
       let active = (urlTag && tags.includes(urlTag)) ? urlTag : "__all__";

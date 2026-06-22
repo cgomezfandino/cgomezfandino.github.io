@@ -181,6 +181,7 @@
       if (!res.ok) throw new Error("HTTP " + res.status);
       let posts = await res.json();
       posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+      if (!posts.length) { wrap.innerHTML = `<p style="color:var(--muted)">${esc(tt("blog.soon"))}</p>`; return; }
       wrap.innerHTML = "";
       posts.slice(0, 2).forEach((p) => {
         const a = el("a", "post-card");

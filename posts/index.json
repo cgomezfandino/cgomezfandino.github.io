@@ -1,18 +1,1 @@
-[
-  {
-    "slug": "reemplazar-vendor-datos-1m",
-    "title": "Cómo reemplazamos un vendor de datos de €1M con un pipeline propio",
-    "excerpt": "La historia técnica de construir un pipeline sociodemográfico geoespacial para 52 países que superó a un proveedor comercial en cobertura y precisión.",
-    "date": "2026-05-20",
-    "readingTime": "8 min",
-    "tags": ["Data Engineering", "Geospatial", "ML"]
-  },
-  {
-    "slug": "agente-conversacional-rag",
-    "title": "Construyendo un agente conversacional con RAG de extremo a extremo",
-    "excerpt": "Arquitectura de un agente con razonamiento multietapa, recuperación sobre pgvector y generación de informes cacheados. Lecciones de Astro Soul Center.",
-    "date": "2026-04-08",
-    "readingTime": "7 min",
-    "tags": ["LLMs", "Full-Stack", "AI"]
-  }
-]
+[]
