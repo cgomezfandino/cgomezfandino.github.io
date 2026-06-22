@@ -6,8 +6,6 @@ readingTime: 7 min
 tags: [LLMs, Full-Stack, AI]
 ---
 
-> **Nota:** post de ejemplo basado en un proyecto real (Astro Soul Center). Edítalo o reemplázalo en `posts/agente-conversacional-rag.md`.
-
 Un chatbot que responde "algo" es fácil. Un agente que mantiene una conversación **coherente, contextual y con conocimiento de dominio** es otra historia. En Astro Soul Center construí un agente conversacional sobre un dominio especializado, y estas son las decisiones de arquitectura que más impacto tuvieron.
 
 ## RAG, pero con intención

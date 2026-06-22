@@ -6,8 +6,6 @@ readingTime: 8 min
 tags: [Data Engineering, Geospatial, ML]
 ---
 
-> **Nota:** este es un post de ejemplo, redactado a partir de un proyecto real. Edítalo o reemplázalo a tu gusto en `posts/reemplazar-vendor-datos-1m.md`.
-
 Cuando una organización depende de un proveedor comercial de datos sociodemográficos, paga no solo por los datos, sino por su rigidez: las columnas que ofrece, los países que cubre y el ritmo al que actualiza. Nos propusimos construir una alternativa **propia** que fuera a la vez más amplia y más barata de mantener.
 
 El resultado fue un pipeline que cubre **52 países** a todos los niveles administrativos, con **262 columnas** de salida, frente a las 67 columnas y 36 países del vendor que reemplazó.
