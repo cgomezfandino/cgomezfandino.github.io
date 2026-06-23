@@ -189,6 +189,18 @@ window.PROFILE = {
       featured: true,
     },
     {
+      name: { es: "Voxnote", en: "Voxnote" },
+      subtitle: { es: "Reuniones a notas, 100% en local", en: "Meetings to notes, 100% local" },
+      description: {
+        es: "Proyecto end-to-end: un pipeline 100% local que graba reuniones, las transcribe, saca los insights con un LLM y los deja ordenados como notas en Obsidian — sin que nada salga de tu máquina. El flujo es audio → Whisper → LLM → Obsidian, con diarización ('quién dijo qué'), CLI, interfaz web y API. Privacidad por diseño: corre en local con Ollama (y admite otros proveedores).",
+        en: "An end-to-end project: a 100%-local pipeline that records meetings, transcribes them, pulls out the insights with an LLM and files them as Obsidian notes — without anything leaving your machine. The flow is audio → Whisper → LLM → Obsidian, with diarization ('who said what'), a CLI, a web UI and an API. Privacy by design: it runs locally with Ollama (and supports other providers).",
+      },
+      tags: ["IA", "Local-first", "Full-stack"],
+      stack: ["Python", "FastAPI", "Next.js", "Whisper / whisperX", "Ollama", "Obsidian"],
+      links: { repo: "https://github.com/cgomezfandino/voxnote" },
+      featured: true,
+    },
+    {
       name: { es: "Modelos Vasicek & CIR", en: "Vasicek & CIR Models" },
       subtitle: { es: "Mis raíces de ingeniero financiero", en: "My financial-engineer roots" },
       description: {
