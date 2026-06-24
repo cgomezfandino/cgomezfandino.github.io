@@ -315,3 +315,74 @@ footer { border-top: 1px solid var(--border); padding: 3.5rem 0; background: var
 /* ---- Reveal ---- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
+
+/* =========================================================================
+ *  Sistema de tarjetas unificado (editorial-tech)
+ *  Base: .spot-card — spotlight cursor + borde de acento superior al hover.
+ *  Sin JS: el hover base sigue funcionando. JS (main.js) actualiza --mx/--my.
+ * ========================================================================= */
+.spot-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  overflow: hidden;
+  --mx: 50%;
+  --my: 50%;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+/* Borde superior de acento que escala de 0→1 al hover */
+.spot-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 0%, transparent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+/* Spotlight interior (halo que sigue el cursor) */
+.spot-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(340px circle at var(--mx) var(--my), color-mix(in srgb, var(--accent) 10%, transparent), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.spot-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  box-shadow: var(--shadow-md);
+}
+.spot-card:hover::before { transform: scaleX(1); }
+.spot-card:hover::after { opacity: 1; }
+
+/* Header de tarjeta: ícono compacto + índice mono */
+.spot-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.1rem; }
+.spot-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.4rem; height: 2.4rem; border-radius: var(--radius-sm);
+  background: var(--accent-soft); color: var(--accent-strong);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.dark .spot-icon { color: var(--accent-strong); }
+.spot-idx { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; color: var(--muted); }
+
+/* Tags mono al pie */
+.spot-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.2rem; }
+.spot-tag {
+  font-family: var(--font-mono); font-size: 0.66rem;
+  padding: 0.22rem 0.5rem; border-radius: 5px;
+  background: var(--surface-alt); border: 1px solid var(--border); color: var(--ink);
+}
+
+/* reduce-motion: el spotlight interior no se anima, el hover base se mantiene */
+@media (prefers-reduced-motion: reduce) {
+  .spot-card { transition: none; }
+  .spot-card::after { display: none; }
+  .spot-card:hover { transform: none; }
+}
