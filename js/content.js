@@ -35,6 +35,11 @@ window.PROFILE = {
     },
     primaryCta: { es: "Mi historia", en: "My story" },
     secondaryCta: { es: "Hablemos", en: "Let's talk" },
+    status: { es: "Disponible", en: "Available" },
+    statusLine: {
+      es: [{ label: "rol", value: "AI & data architect" }, { label: "base", value: "Madrid, ES" }, { label: "foco", value: "IA end-to-end" }],
+      en: [{ label: "role", value: "AI & data architect" }, { label: "based", value: "Madrid, ES" }, { label: "focus", value: "End-to-end AI" }],
+    },
   },
 
   /* ---- Historia ---- */
@@ -159,6 +164,7 @@ window.PROFILE = {
       "Python", "Databricks", "DuckDB", "LangChain / LangGraph", "RAG",
       "MCP", "Claude Code", "Cursor", "Next.js", "PostgreSQL / pgvector", "Dagster",
     ],
+    highlight: ["Claude Code", "LangChain / LangGraph", "MCP"],
   },
 
   /* ---- Cosas que he construido ---- */
