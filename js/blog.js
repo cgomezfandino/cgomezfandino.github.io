@@ -230,7 +230,7 @@
     const header = $("#post-header"), content = $("#post-content");
     if (!slug || !/^[a-z0-9-]+$/i.test(slug)) {
       header.innerHTML = `<h1>${esc(tt("post.not_found"))}</h1>`;
-      content.innerHTML = `<p><a class="post-back" href="blog.html">${esc(tt("blog.back"))}</a></p>`;
+      content.innerHTML = `<p><a class="post-back" href="index.html#blog">${esc(tt("blog.back"))}</a></p>`;
       return;
     }
     try {
@@ -257,7 +257,7 @@
       renderRelated(slug, Array.isArray(meta.tags) ? meta.tags : []);
     } catch (err) {
       header.innerHTML = `<h1>${esc(tt("post.not_found"))}</h1>`;
-      content.innerHTML = `<p style="color:var(--muted)">${esc(tt("blog.read_error"))}</p><p><a class="post-back" href="blog.html">${esc(tt("blog.back"))}</a></p>`;
+      content.innerHTML = `<p style="color:var(--muted)">${esc(tt("blog.read_error"))}</p><p><a class="post-back" href="index.html#blog">${esc(tt("blog.back"))}</a></p>`;
       console.error(err);
     }
   }

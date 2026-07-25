@@ -1,6 +1,6 @@
 # Carlos E. Gómez Fandiño — Tato
 
-Mi sitio personal y blog, **bilingüe (ES/EN)**. **Más un lienzo que un CV**: data, IA, mercados, música, Tesla y el cosmos. → [cgomezfandino.github.io](https://cgomezfandino.github.io/)
+Mi sitio personal y blog, **bilingüe (ES/EN)**. Carta de presentación de un arquitecto de IA & datos: productos end-to-end, mercados y cosmos. → [cgomezfandino.github.io](https://cgomezfandino.github.io/)
 
 Sitio **estático** (HTML + CSS + JS, sin frameworks ni build), **construido con IA (vibe coding)** y dirigido como un proyecto, para **GitHub Pages**. Identidad "Editorial Cream" (crema + rojo), tipografía serif Fraunces, modo claro/oscuro.
 
@@ -46,7 +46,7 @@ python3 -m http.server 8004 --directory ~/repos/cgomezfandino
 
 ```
 index.html        Página principal (hero, historia, pasiones, en qué ando, proyectos, blog, contacto)
-blog.html         Índice del blog
+blog.html         Redirige a index.html#blog (el índice vive en el landing)
 post.html         Render de un post (?slug=...)
 css/              styles.css (tema/animaciones) · blog.css (prosa)
 js/               content.js (datos + UI) · main.js (perfil) · blog.js (blog)
