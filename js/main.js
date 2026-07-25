@@ -116,27 +116,55 @@
     $("#building-body").textContent = t(P.building.body);
     $("#toolbox-title").textContent = t(P.toolbox.title);
     const chips = $("#toolbox-chips"); chips.innerHTML = "";
-    (P.toolbox.items || []).forEach((s) => chips.appendChild(el("span", "chip-tag", esc(s))));
+    const hi = new Set(P.toolbox.highlight || []);
+    (P.toolbox.items || []).forEach((s) => {
+      chips.appendChild(el("span", "chip-tag" + (hi.has(s) ? " is-highlight" : ""), esc(s)));
+    });
   }
 
   /* ---- PROJECTS ---- */
+  function projectCardActions(proj) {
+    const l = proj.links || {};
+    let html = "";
+    if (l.demo) {
+      html += `<a class="project-action project-action--demo" target="_blank" rel="noopener noreferrer" href="${esc(l.demo)}" data-project-action>${esc(tt("card.demo"))} ${ICONS.external}</a>`;
+    }
+    if (l.repo) {
+      html += `<a class="project-action project-action--repo" target="_blank" rel="noopener noreferrer" href="${esc(l.repo)}" data-project-action>${esc(tt("card.repo"))} ${ICONS.github}</a>`;
+    }
+    html += `<button type="button" class="project-action project-action--more" data-project-more>${esc(tt("card.more"))}</button>`;
+    return html ? `<div class="project-actions">${html}</div>` : "";
+  }
+
   function renderProjects() {
     $("#projects-title").textContent = t(P.projectsTitle);
     const grid = $("#projects-grid"); grid.innerHTML = "";
     visibleProjects().forEach((proj) => {
       const card = el("article", "project-card reveal" + (proj.featured ? " is-featured" : ""));
-      card.tabIndex = 0; card.setAttribute("role", "button"); card.setAttribute("aria-label", t(proj.name));
+      card.tabIndex = 0;
+      card.setAttribute("role", "button");
+      card.setAttribute("aria-label", t(proj.name));
       const stack = (proj.stack || []).map((s) => `<span class="badge">${esc(s)}</span>`).join("");
-      const hasLink = proj.links && (proj.links.repo || proj.links.demo);
       card.innerHTML =
         `${proj.featured ? `<span class="featured-tag">${LANG === "es" ? "Destacado" : "Featured"}</span>` : ""}
          <h3>${esc(t(proj.name))}</h3>
          <p class="project-sub">${esc(t(proj.subtitle) || "")}</p>
          <p class="project-desc">${esc(t(proj.description) || "")}</p>
          <div class="project-stack">${stack}</div>
-         ${hasLink ? `<span class="project-link-hint">${ICONS.external}</span>` : ""}`;
-      card.addEventListener("click", () => openModal(proj));
-      card.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(proj); } });
+         ${projectCardActions(proj)}`;
+      card.addEventListener("click", (e) => {
+        if (e.target.closest("[data-project-action]")) return;
+        openModal(proj);
+      });
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          if (e.target.closest("[data-project-action]")) return;
+          e.preventDefault();
+          openModal(proj);
+        }
+      });
+      const moreBtn = $(".project-action--more", card);
+      if (moreBtn) moreBtn.addEventListener("click", (e) => { e.stopPropagation(); openModal(proj); });
       grid.appendChild(card);
     });
   }
@@ -168,31 +196,99 @@
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }
 
-  /* ---- BLOG (home preview) ---- */
+  /* ---- BLOG (sección del landing; abre post.html?slug=…) ---- */
+  let homePostsCache = null;
+  let homeBlogFilter = "__all__";
+
+  function fmtPostDate(iso) {
+    try {
+      return new Date(iso).toLocaleDateString(LANG === "es" ? "es-ES" : "en-US", { year: "numeric", month: "long", day: "numeric" });
+    } catch { return iso; }
+  }
+
   function renderBlogIntro() {
     $("#blog-title").textContent = t(P.blog.title);
     $("#blog-lead").textContent = t(P.blog.lead);
-    $("#blog-more").innerHTML = esc(tt("blog.readmore")) + " " + ICONS.arrow;
   }
+
+  function drawHomePosts() {
+    const wrap = $("#home-posts");
+    const filters = $("#home-blog-filters");
+    const countEl = $("#home-blog-count");
+    if (!wrap || !homePostsCache) return;
+
+    const posts = homePostsCache;
+    if (!posts.length) {
+      if (filters) { filters.hidden = true; filters.innerHTML = ""; }
+      if (countEl) { countEl.hidden = true; countEl.textContent = ""; }
+      wrap.innerHTML = `<p class="blog-empty-msg">${esc(tt("blog.soon"))}</p>`;
+      return;
+    }
+
+    const tags = [...new Set(posts.flatMap((p) => p.tags || []))];
+    if (filters) {
+      if (tags.length) {
+        filters.hidden = false;
+        filters.setAttribute("aria-label", tt("a11y.filters"));
+        filters.innerHTML = "";
+        [{ value: "__all__", label: tt("filter.all") }, ...tags.map((tg) => ({ value: tg, label: tg }))].forEach((d) => {
+          const chip = el("button", "chip" + (d.value === homeBlogFilter ? " active" : ""));
+          chip.type = "button";
+          chip.textContent = d.label;
+          chip.dataset.filter = d.value;
+          chip.setAttribute("aria-pressed", String(d.value === homeBlogFilter));
+          chip.addEventListener("click", () => {
+            homeBlogFilter = d.value;
+            drawHomePosts();
+          });
+          filters.appendChild(chip);
+        });
+      } else {
+        filters.hidden = true;
+        filters.innerHTML = "";
+      }
+    }
+
+    const shown = posts.filter((p) => homeBlogFilter === "__all__" || (p.tags || []).includes(homeBlogFilter));
+    if (countEl) {
+      countEl.hidden = false;
+      countEl.textContent = tt(shown.length === 1 ? "blog.count_one" : "blog.count").replace("{n}", String(shown.length));
+    }
+
+    wrap.innerHTML = "";
+    if (!shown.length) {
+      wrap.innerHTML = `<p class="blog-empty-msg">${esc(tt("blog.empty"))}</p>`;
+      return;
+    }
+
+    shown.forEach((p, i) => {
+      const a = el("a", "post-card" + (i === 0 && homeBlogFilter === "__all__" ? " post-card--feature" : ""));
+      a.href = "post.html?slug=" + encodeURIComponent(p.slug);
+      const tagsHtml = (p.tags || []).map((tg) => `<span class="badge">${esc(tg)}</span>`).join(" ");
+      a.innerHTML =
+        `<div class="post-meta"><time datetime="${esc(p.date)}">${esc(fmtPostDate(p.date))}</time>${p.readingTime ? `<span>· ${esc(p.readingTime)}</span>` : ""}</div>
+         <h3 class="post-card-title">${esc(p.title)}</h3>
+         <p class="post-card-excerpt">${esc(p.excerpt || "")}</p>
+         ${tagsHtml ? `<div class="post-card-tags">${tagsHtml}</div>` : ""}
+         <span class="post-card-go" aria-hidden="true">→</span>`;
+      wrap.appendChild(a);
+    });
+  }
+
   async function loadHomePosts() {
     const wrap = $("#home-posts"); if (!wrap) return;
     try {
       const res = await fetch("posts/index.json", { cache: "no-cache" });
       if (!res.ok) throw new Error("HTTP " + res.status);
       let posts = await res.json();
+      if (!Array.isArray(posts)) posts = [];
       posts.sort((a, b) => (a.date < b.date ? 1 : -1));
-      if (!posts.length) { wrap.innerHTML = `<p style="color:var(--muted)">${esc(tt("blog.soon"))}</p>`; return; }
-      wrap.innerHTML = "";
-      posts.slice(0, 2).forEach((p) => {
-        const a = el("a", "post-card");
-        a.href = "post.html?slug=" + encodeURIComponent(p.slug);
-        const d = new Date(p.date).toLocaleDateString(LANG === "es" ? "es-ES" : "en-US", { year: "numeric", month: "long", day: "numeric" });
-        a.innerHTML = `<div class="post-meta"><time datetime="${esc(p.date)}">${esc(d)}</time>${p.readingTime ? `<span>· ${esc(p.readingTime)}</span>` : ""}</div>
-          <h3 class="post-card-title">${esc(p.title)}</h3>
-          <p class="post-card-excerpt">${esc(p.excerpt || "")}</p>`;
-        wrap.appendChild(a);
-      });
-    } catch (e) { wrap.innerHTML = ""; }
+      homePostsCache = posts;
+      drawHomePosts();
+    } catch (e) {
+      homePostsCache = [];
+      wrap.innerHTML = `<p class="blog-empty-msg">${esc(tt("blog.read_error"))}</p>`;
+    }
   }
 
   /* ---- CONTACT ---- */
@@ -235,7 +331,9 @@
 
   function renderAll() {
     renderHero(); renderStory(); renderPassions(); renderBuilding();
-    renderProjects(); renderBlogIntro(); loadHomePosts(); renderContact(); renderFooter();
+    renderProjects(); renderBlogIntro();
+    if (homePostsCache) drawHomePosts(); else loadHomePosts();
+    renderContact(); renderFooter();
   }
 
   /* ---- Interacciones ---- */

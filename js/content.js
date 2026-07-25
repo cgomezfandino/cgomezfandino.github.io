@@ -2,6 +2,7 @@
  *  content.js — ÚNICA FUENTE DE VERDAD (sitio personal de "Tato", bilingüe ES/EN)
  *  -------------------------------------------------------------------------
  *  Textos traducibles = { es, en }. Datos neutros (links, iconos) = strings.
+ *  Voz: docs/superpowers/specs/2026-07-25-voice-guide-design.md
  * ========================================================================= */
 
 window.PROFILE = {
@@ -26,46 +27,58 @@ window.PROFILE = {
     headline: { es: "Carlos E. Gómez Fandiño", en: "Carlos E. Gómez Fandiño" },
     alias: "Tato",
     roles: {
-      es: ["Arquitecto de IA & datos", "Data & IA", "Guitarrista", "Curioso del cosmos", "Constructor de futuros", "Vibe coder"],
-      en: ["AI & data architect", "Data & AI", "Guitar player", "Cosmos-curious", "Future-builder", "Vibe coder"],
+      es: ["Arquitecto de IA & datos", "Construyo productos de IA", "Data engineer", "Curioso del cosmos"],
+      en: ["AI & data architect", "I build AI products", "Data engineer", "Cosmos-curious"],
     },
     tagline: {
-      es: "Construyo cosas que antes no existían —con datos, IA y mucha curiosidad—. Toco la guitarra, miro al cielo más de la cuenta y estoy convencido de que el futuro se construye, no se espera. Si algo de esto te suena, quédate — creo que nos vamos a llevar bien.",
-      en: "I build things that didn't exist yet —with data, AI and a lot of curiosity—. I play guitar, look up at the sky more than I should, and I'm convinced the future is built, not awaited. If any of this clicks, stick around — I think we'll get along.",
+      es: "Diseño y construyo productos de IA end-to-end —siempre con human in the loop—. Antes en Capital Markets; ahora en Northa y Containeer.",
+      en: "I design and build AI products end-to-end — always with humans in the loop. Formerly Capital Markets; now Northa and Containeer.",
     },
     primaryCta: { es: "Mi historia", en: "My story" },
     secondaryCta: { es: "Hablemos", en: "Let's talk" },
     status: { es: "Disponible", en: "Available" },
     statusLine: {
-      es: [{ label: "rol", value: "AI & data architect" }, { label: "base", value: "Madrid, ES" }, { label: "foco", value: "IA end-to-end" }],
-      en: [{ label: "role", value: "AI & data architect" }, { label: "based", value: "Madrid, ES" }, { label: "focus", value: "End-to-end AI" }],
+      es: [{ label: "rol", value: "AI & data architect" }, { label: "base", value: "Madrid, ES" }, { label: "foco", value: "Northa · Containeer" }],
+      en: [{ label: "role", value: "AI & data architect" }, { label: "based", value: "Madrid, ES" }, { label: "focus", value: "Northa · Containeer" }],
     },
   },
 
   /* ---- Historia ---- */
   story: {
-    title: { es: "Más un lienzo que un CV", en: "More a canvas than a résumé" },
+    title: { es: "Cómo llegué aquí", en: "How I got here" },
     paragraphs: [
       {
-        es: "Crecí en Colombia —tierra de café, de naturaleza desbordante y de gente amable y carismática—, siempre con una guitarra cerca y una pregunta que nunca se apaga: ¿cómo funciona esto? La buena música fue mi primera casa, y la curiosidad, el motor de todo lo demás.",
-        en: "I grew up in Colombia —land of coffee, of overflowing nature and warm, charismatic people—, always with a guitar nearby and a question that never switches off: how does this work? Good music was my first home, and curiosity, the engine behind everything else.",
+        es: "Estudié Ingeniería Financiera en Colombia por una razón clara: me apasionaban los negocios y las finanzas. Ya durante la carrera me enamoré del mercado de capitales y bursátil, un interés que me llevó al High-Frequency Trading (HFT) y al trading algorítmico.",
+        en: "I studied Financial Engineering in Colombia for a simple reason: I was passionate about business and finance. During the degree I fell for capital markets and equities — an interest that took me straight into high-frequency trading (HFT) and algorithmic trading.",
       },
       {
-        es: "Me hice ingeniero financiero, pero me enamoré por igual de los negocios y de la programación. Siempre intuí que esos dos mundos terminarían encontrándose y que, juntos, podían hacer la vida más sencilla. Esa misma inquietud por automatizar lo tedioso me empujó a cruzar el océano —de las finanzas a los datos, de Bogotá a Madrid— para hacer un máster en Big Data & Business Analytics.",
-        en: "I trained as a financial engineer, but I fell just as hard for business and for programming. I always sensed those two worlds would eventually meet and, together, make life simpler. That same itch to automate the tedious pushed me across the ocean —from finance to data, from Bogotá to Madrid— to do a master's in Big Data & Business Analytics.",
+        es: "Fue ahí donde se encendió la chispa por la programación: el código dejó de ser un pasatiempo y se convirtió en la herramienta clave para ejecutar ideas.",
+        en: "That's where the spark for programming lit up: code stopped being a pastime and became the key tool to execute ideas.",
       },
       {
-        es: "Durante años le enseñé a las máquinas a encontrar orden en el caos, a convertir montañas de datos en una sola decisión clara. Pero nunca me quedé con el modelo: me quedo con ese instante en que algo confuso, de pronto, tiene sentido. Hoy cierro ese capítulo y abro una página en blanco, con más ganas que nunca de construir lo que viene.",
-        en: "For years I taught machines to find order in chaos, to turn mountains of data into a single clear decision. But I never kept the model; I keep the moment when something confusing suddenly makes sense. Today I'm closing that chapter and opening a blank page, more eager than ever to build what comes next.",
+        es: "En medio de ese proceso en la universidad me empezó a rondar una pregunta muy personal: ¿cómo automatizar lo pesado y lo repetitivo para ganar tiempo para lo que a mí de verdad me importaba? Con los años esa búsqueda evolucionó: lo que empezó como una forma de ganar eficiencia para mí se transformó en la visión de quitarle fricción del día a día a los demás.",
+        en: "In the middle of university a personal question started circling me: how do you automate the heavy and the repetitive to free time for what actually mattered to me? Over the years that search evolved: what began as a way to gain efficiency for myself became a vision of taking day-to-day friction off other people's plates.",
       },
       {
-        es: "Me mueve la inteligencia artificial por todo lo que nos deja crear, y esa misma terquedad de los pioneros por reinventar desde cero y mirar al futuro —y al espacio— sin pedir permiso. Y cuando levanto la vista, el universo me recuerda lo pequeños y lo posibles que somos a la vez. Entre todo eso, siempre, la guitarra cerca. Esto no es un currículum: es un lienzo. Si algo de aquí te resuena, quédate.",
-        en: "I'm moved by artificial intelligence and all it lets us create, and by that same pioneer stubbornness to reinvent from scratch and look toward the future —and toward space— without asking permission. And when I look up, the universe reminds me how small and how capable we are at once. Through all of it, always, a guitar within reach. This isn't a résumé: it's a canvas. If any of it resonates, stay a while.",
+        es: "Con ganas de llevar esa combinación de finanzas, software y datos más lejos, me mudé a Madrid para profundizar en inteligencia artificial y ciencia de datos.",
+        en: "Wanting to take that mix of finance, software and data further, I moved to Madrid to go deeper into artificial intelligence and data science.",
+      },
+      {
+        es: "Durante más de una década me moví en el corazón de Capital Markets como Director de Technology Business Analysis: diseñando pipelines e integraciones de IA en productos corporativos para que los equipos los usaran en su día a día.",
+        en: "For more than a decade I worked at the core of Capital Markets as Director of Technology Business Analysis — designing pipelines and AI integrations into corporate products so teams could use them every day.",
+      },
+      {
+        es: "Con toda esa experiencia a la espalda, decidí dar el salto a mis propios proyectos end-to-end —desde la primera idea hasta la persona que los utiliza. Hoy la IA me interesa cuando se usa con criterio y responsabilidad: automatizar todo lo posible, manteniendo siempre al humano en el centro (human in the loop).",
+        en: "With that experience behind me, I took the leap into my own end-to-end projects — from the first idea to the person who uses them. Today I care about AI when it's used with judgment and responsibility: automate as much as makes sense, always keeping humans in the loop.",
+      },
+      {
+        es: "Ahí es donde está mi energía ahora: construyendo productos que importan. Si este enfoque te conecta, me encantará que conversemos.",
+        en: "That's where my energy is now: building products that matter. If this approach resonates, I'd love to talk.",
       },
     ],
     disciplineLead: {
-      es: "Si algo he aprendido es que el talento sin constancia se estanca; es la disciplina, ese hábito terco, la que termina logrando lo extraordinario. Por eso llevo conmigo estas dos frases:",
-      en: "If there's one thing I've learned, it's that talent without consistency stalls; it's discipline —that stubborn habit— that ends up achieving the extraordinary. That's why I carry these two lines with me:",
+      es: "El talento solo no basta. Me quedo con estas dos frases:",
+      en: "Talent alone isn't enough. I hold onto these two lines:",
     },
     quotes: [
       {
@@ -90,59 +103,51 @@ window.PROFILE = {
     title: { es: "Lo que me mueve", en: "What moves me" },
     items: [
       {
-        icon: "music",
-        title: { es: "Música y guitarra", en: "Music & guitar" },
-        body: {
-          es: "Toco la guitarra desde joven y no la suelto. No es un hobby: es mi forma de relajarme y desconectar cuando todo va demasiado rápido. Casi siempre llevo una canción sonándome por dentro.",
-          en: "I've played guitar since I was young and I don't put it down. It's not a hobby: it's how I relax and switch off when everything's moving too fast. There's almost always a song playing somewhere in me.",
-        },
-      },
-      {
         icon: "code",
         title: { es: "IA y vibe coding", en: "AI & vibe coding" },
         body: {
-          es: "Construyo de la mano de agentes, con herramientas como Claude Code y Cursor. Me fascina lo que sale cuando colaboras con ellos en vez de pelearte: una idea por la mañana y algo funcionando por la tarde. Se siente menos como teclear y más como dirigir.",
-          en: "I build hand in hand with agents, using tools like Claude Code and Cursor. I'm fascinated by what comes out when you work with them instead of fighting them: an idea in the morning and something running by the afternoon. It feels less like typing and more like conducting.",
+          es: "Construyo con agentes (Claude Code, Cursor), pero el plan y el criterio son míos. Una idea por la mañana puede estar corriendo por la tarde: se trata de dirigir bien, no de teclear más.",
+          en: "I build with agents (Claude Code, Cursor), but the plan and judgment are mine. An idea in the morning can be running by afternoon: it's about directing well, not typing more.",
         },
       },
       {
         icon: "markets",
         title: { es: "Mercados y real estate", en: "Markets & real estate" },
         body: {
-          es: "Me engancha entender las dinámicas del mercado: los patrones, el comportamiento de consumo y lo que de verdad mueve los precios. Buscar dónde están las oportunidades para generar riqueza —asumiendo los riesgos con los ojos abiertos— es algo que no se me apaga. El real estate es uno de mis terrenos favoritos para verlo de cerca.",
-          en: "I'm hooked on understanding how markets work: the patterns, consumer behavior, and what actually moves prices. Hunting for where the real opportunities to build wealth are —taking the risks with my eyes open— is something that never switches off in me. Real estate is one of my favorite places to watch it up close.",
+          es: "Me engancha entender qué mueve un precio: capital, comportamiento, rotación. Buscar oportunidad con el riesgo a la vista. De ahí viene Containeer —y años de mirar mercados de cerca.",
+          en: "I'm hooked on what moves a price: capital, behavior, rotation. Hunting opportunity with risk in plain sight. That's where Containeer comes from — and years of watching markets up close.",
         },
       },
       {
         icon: "bolt",
         title: { es: "Pioneros y el futuro", en: "Pioneers & the future" },
         body: {
-          es: "Me mueven los pioneros: los que se meten en una industria entera y la empujan a donde nadie se atrevía. Más que la tecnología en sí, me mueve su visión —apostar por lo eléctrico, lo autónomo, el espacio y el futuro mucho antes de que fueran obvios— y la terquedad para ejecutarla. Me recuerdan que casi todo lo que hoy damos por hecho, alguien tuvo que imaginarlo primero.",
-          en: "What moves me are pioneers: the ones who step into a whole industry and push it where no one dared. More than the technology itself, it's their vision that moves me —betting on electric, autonomous, space, the future long before any of it was obvious— and the stubbornness to pull it off. They remind me that almost everything we take for granted today, someone had to imagine first.",
+          es: "Me inspiran quienes empujan una industria a un sitio que aún no es obvio —eléctrico, autónomo, espacio—. No tanto el gadget como la visión y la constancia de ejecutarla.",
+          en: "I'm inspired by people who push an industry somewhere not obvious yet —electric, autonomous, space—. Less the gadget, more the vision and the discipline to ship it.",
         },
       },
       {
         icon: "planet",
         title: { es: "El Universo", en: "The Universe" },
         body: {
-          es: "Mirar al cielo me recuerda lo pequeños que somos y, a la vez, lo lejos que podríamos llegar. Conecto mucho con la idea de Elon Musk de hacer de la humanidad una especie multiplanetaria: esas ganas de llevar la vida humana más allá de la Tierra, a otros planetas y, algún día, aún más lejos. El universo no me da miedo; me da ganas de futuro.",
-          en: "Looking up reminds me how small we are and, at the same time, how far we could go. I connect a lot with Elon Musk's idea of making humanity a multiplanetary species: that drive to take human life beyond Earth, to other planets and, someday, further still. The universe doesn't scare me; it makes me hungry for the future.",
+          es: "Mirar al cielo pone la escala en su sitio. Me interesa el futuro multiplanetario por los problemas difíciles que abre —ciencia, ingeniería, paciencia— no por la fantasía del cartel.",
+          en: "Looking up puts scale in its place. Multiplanetary futures interest me for the hard problems they open — science, engineering, patience — not poster fantasy.",
         },
       },
       {
         icon: "rocket",
         title: { es: "Construir de cero", en: "Building from zero" },
         body: {
-          es: "Lo que de verdad me prende es llevar una idea de la servilleta a producción, con usuarios reales del otro lado. Me gusta el caos honesto de empezar de cero, equivocarme rápido y ver algo cobrar vida —de la arquitectura al primer usuario—. No hay nada como ver a alguien usar algo que ayudaste a construir.",
-          en: "What really lights me up is taking an idea from napkin to production, with real users on the other side. I like the honest chaos of starting from zero, getting it wrong fast, and watching something come to life —from the architecture to the first user. There's nothing like seeing someone use something you helped build.",
+          es: "De la servilleta a producción, con gente real del otro lado. Empezar, equivocarse rápido, rearmar. Es lo que más me engancha: ver algo nacer y que alguien lo use.",
+          en: "From napkin to production, with real people on the other side. Start, get it wrong fast, rewire. What hooks me most: watching something come alive and someone actually use it.",
         },
       },
       {
         icon: "moon-stars",
         title: { es: "Astrología", en: "Astrology" },
         body: {
-          es: "La astrología me atrapa por lo que dice de cada persona, no por el cielo en abstracto: una de las formas más antiguas de entender quiénes somos por dentro y qué nos mueve. No la tomo como dogma ni como adivinación, sino como un mapa para mirarse hacia dentro. Esa misma curiosidad inspiró Astro Soul, un proyecto donde junto mi lado técnico con el más humano.",
-          en: "What pulls me into astrology is what it says about each person, not the sky in the abstract: one of the oldest ways of understanding who we are inside and what moves us. I don't take it as dogma or fortune-telling, but as a map for looking inward. That same curiosity inspired Astro Soul, a project where I bring my technical side together with my more human one.",
+          es: "La veo como un mapa de la persona, no como predicción. Sin dogma. Esa mirada alimenta Northa: cálculo serio, IA con criterio, y un humano cuando hace falta.",
+          en: "I see it as a map of the person, not as prediction. No dogma. That lens feeds Northa: serious calculation, AI with judgment, and a human when it matters.",
         },
       },
     ],
@@ -152,12 +157,12 @@ window.PROFILE = {
   building: {
     title: { es: "En qué ando ahora", en: "What I'm building now" },
     body: {
-      es: "Ahora mismo estoy de lleno construyendo productos de IA de punta a punta: de la arquitectura de datos al modelo, y del modelo a la primera persona que lo usa. Dos de ellos —Astro Soul Center, IA + astrología para el público hispano, y Containeer, inteligencia de inversión institucional para Commercial Real Estate (CRE)— me tienen explorando los dos extremos del espectro: lo más humano y lo más institucional. Los tienes un poco más abajo.",
-      en: "Right now I'm deep in building end-to-end AI products: from the data architecture to the model, and from the model to the first person who uses it. Two of them —Astro Soul Center, AI + astrology for Spanish-speaking audiences, and Containeer, institutional investment intelligence for Commercial Real Estate (CRE)— have me exploring both ends of the spectrum: the most human and the most institutional. You'll find them just below.",
+      es: "Ahora mismo, dos productos end-to-end. Northa: carta, chat e informes para encontrar tu dirección —con profesional cuando hace falta. Containeer: ownership, transacciones y crédito CMBS en una sola inteligencia para CRE. Distintos, mismo hilo: menos fricción, human in the loop.",
+      en: "Right now, two end-to-end products. Northa: chart, chat and reports to find your direction — with a pro when you need one. Containeer: ownership, transactions and CMBS credit in one intelligence layer for CRE. Different problems, same thread: less friction, humans in the loop.",
     },
   },
 
-  /* ---- Caja de herramientas (casual) ---- */
+  /* ---- Caja de herramientas ---- */
   toolbox: {
     title: { es: "Con lo que construyo", en: "What I build with" },
     items: [
@@ -171,47 +176,56 @@ window.PROFILE = {
   projectsTitle: { es: "Cosas que he construido", en: "Things I've built" },
   projects: [
     {
-      name: { es: "Astro Soul Center", en: "Astro Soul Center" },
-      subtitle: { es: "Plataforma de IA B2C, de punta a punta", en: "End-to-end B2C AI platform" },
-      description: {
-        es: "Una plataforma B2C donde la IA hace la astrología algo personal: cartas natales, guía diaria e interpretación a la medida de cada persona, para el público hispanohablante. La pensé y la construí de principio a fin —de la idea a la experiencia que la gente usa cada día—: una forma cálida y cercana de mirarse hacia dentro y reconectar con el cosmos. Donde mi lado técnico se da la mano con mi fascinación por el universo.",
-        en: "A B2C platform where AI makes astrology personal: natal charts, daily guidance and interpretation tailored to each person, for Spanish-speaking audiences. I imagined and built it end to end —from the first idea to the experience people use every day—: a warm, close way to look inward and reconnect with the cosmos. Where my technical side shakes hands with my fascination for the universe.",
+      name: { es: "Northa", en: "Northa" },
+      subtitle: {
+        es: "Astrología psicológica + IA: encuentra tu dirección",
+        en: "Psychological astrology + AI: find your direction",
       },
-      tags: ["IA", "End-to-end", "RAG"],
-      stack: ["Next.js", "PostgreSQL / pgvector", "LLMs", "AWS"],
-      links: {},
+      description: {
+        es: "Plataforma B2C de autoconocimiento: carta natal con cálculo astronómico preciso, chat guiado para explorar tu mapa a tu ritmo e informes en PDF (personalidad, mes psicológico, y más). Cuando quieras ir más lejos, un profesional te acompaña. Diseñé y construí el producto end-to-end —stack, IA y flujo human in the loop—. En vivo en northa.center.",
+        en: "B2C self-knowledge platform: natal chart with precise astronomical calculation, guided chat to explore your map at your own pace, and PDF reports (personality, monthly psychological view, and more). When you want to go deeper, a professional walks with you. I designed and built the product end-to-end — stack, AI, and human-in-the-loop flow. Live at northa.center.",
+      },
+      tags: ["IA", "B2C", "End-to-end"],
+      stack: ["Next.js", "PostgreSQL / pgvector", "LangChain", "LLMs", "AWS"],
+      links: { demo: "https://www.northa.center" },
       featured: true,
     },
     {
       name: { es: "Containeer", en: "Containeer" },
-      subtitle: { es: "Fintech B2B: inteligencia de inversión institucional", en: "B2B fintech: institutional investment intelligence" },
-      description: {
-        es: "Proyecto end-to-end que convierte las divulgaciones públicas de los grandes inversores institucionales en analítica de grado institucional para Commercial Real Estate (CRE): qué están comprando, vendiendo y hacia dónde rotan, posicionamiento de competidores, rotación sectorial y trayectoria de AUM —sin parseo manual—. Diseñé y construí toda la cadena: un pipeline que ingiere y normaliza esos datos en ciclo semanal, entity-resolution sobre cadenas de propiedad de fondos complejas (matching probabilístico + verificación con LLM) y un Asset Explorer con capa geográfica y sectorial. La inteligencia corre sobre una capa de IA con Claude.",
-        en: "An end-to-end project that turns the public disclosures of large institutional investors into institutional-grade analytics for Commercial Real Estate (CRE): what they're buying, selling and rotating into, competitor positioning, sector rotation and AUM trajectory —with no manual parsing. I designed and built the whole chain: a pipeline that ingests and normalizes that data on a weekly cycle, entity resolution over complex fund ownership chains (probabilistic matching + LLM verification), and an Asset Explorer with geographic and sector layers. The intelligence runs on an AI layer powered by Claude.",
+      subtitle: {
+        es: "Property & transaction intelligence para CRE",
+        en: "Property & transaction intelligence for CRE",
       },
-      tags: ["Fintech", "IA", "Entity resolution"],
-      stack: ["Next.js", "PostgreSQL", "DuckDB", "Splink", "MCP", "Claude API"],
-      links: {},
+      description: {
+        es: "Una plataforma que unifica ownership inmobiliario en EE.UU., transacciones, financials de compañías y REITs, e inteligencia de crédito CMBS. De filings y datos dispersos a una vista usable: quién posee qué, cómo se mueve el capital y dónde está el riesgo en commercial real estate. Diseñé y construí la cadena end-to-end (pipelines, entity resolution, producto). En vivo en containeer.com.",
+        en: "One platform unifying U.S. property ownership, transactions, company and REIT financials, and CMBS credit intelligence. From scattered filings and data to a usable view: who owns what, how capital moves, and where risk sits in commercial real estate. I designed and built the chain end-to-end (pipelines, entity resolution, product). Live at containeer.com.",
+      },
+      tags: ["CRE", "Fintech", "IA"],
+      stack: ["Next.js", "DuckDB", "Splink", "MCP", "Claude API", "Cloudflare"],
+      links: { demo: "https://www.containeer.com" },
       featured: true,
     },
     {
       name: { es: "Voxnote", en: "Voxnote" },
-      subtitle: { es: "Reuniones a notas, 100% en local", en: "Meetings to notes, 100% local" },
-      description: {
-        es: "Proyecto end-to-end: un pipeline 100% local que graba reuniones, las transcribe, saca los insights con un LLM y los deja ordenados como notas en Obsidian — sin que nada salga de tu máquina. El flujo es audio → Whisper → LLM → Obsidian, con diarización ('quién dijo qué'), CLI, interfaz web y API. Privacidad por diseño: corre en local con Ollama (y admite otros proveedores).",
-        en: "An end-to-end project: a 100%-local pipeline that records meetings, transcribes them, pulls out the insights with an LLM and files them as Obsidian notes — without anything leaving your machine. The flow is audio → Whisper → LLM → Obsidian, with diarization ('who said what'), a CLI, a web UI and an API. Privacy by design: it runs locally with Ollama (and supports other providers).",
+      subtitle: {
+        es: "Reuniones → notas e insights, 100% local",
+        en: "Meetings → notes & insights, 100% local",
       },
-      tags: ["IA", "Local-first", "Full-stack"],
-      stack: ["Python", "FastAPI", "Next.js", "Whisper / whisperX", "Ollama", "Obsidian"],
+      description: {
+        es: "Pipeline privado para grabar reuniones, transcribirlas y sacar insights con un LLM —sin que el audio salga de tu máquina. Flujo: audio → Whisper → LLM → notas estructuradas. Diarización (quién dijo qué), CLI, interfaz web y API. Ollama u otros proveedores. Open source.",
+        en: "A private pipeline to record meetings, transcribe them, and pull insights with an LLM — audio never leaves your machine. Flow: audio → Whisper → LLM → structured notes. Diarization (who said what), CLI, web UI and API. Ollama or other providers. Open source.",
+      },
+      tags: ["IA", "Local-first", "Open source"],
+      stack: ["Python", "FastAPI", "Next.js", "Whisper / whisperX", "Ollama"],
       links: { repo: "https://github.com/cgomezfandino/voxnote" },
       featured: true,
     },
     {
       name: { es: "Modelos Vasicek & CIR", en: "Vasicek & CIR Models" },
-      subtitle: { es: "Mis raíces de ingeniero financiero", en: "My financial-engineer roots" },
+      subtitle: { es: "Donde empezó el cruce finanzas + código", en: "Where finance met code for me" },
       description: {
-        es: "Mi tesis de grado: predicción de la curva de tipos cupón cero con los modelos de Vasicek y CIR, implementados en MATLAB. El proyecto donde las finanzas y el código empezaron a darse la mano.",
-        en: "My undergraduate thesis: forecasting the zero-coupon yield curve with the Vasicek and CIR models, implemented in MATLAB. The project where finance and code first started shaking hands.",
+        es: "Tesis de grado: predicción de la curva de tipos con Vasicek y CIR en MATLAB. El primer proyecto serio donde finanzas y programación se juntaron —antes del trading algorítmico y de lo que vino después.",
+        en: "Undergrad thesis: yield-curve forecasting with Vasicek and CIR in MATLAB. The first serious project where finance and programming met — before algo trading and everything after.",
       },
       tags: ["Quant", "Finanzas"],
       stack: ["MATLAB", "Modelos estocásticos"],
@@ -220,13 +234,13 @@ window.PROFILE = {
     },
     {
       name: { es: "Este mismo sitio", en: "This very site" },
-      subtitle: { es: "Planeado y dirigido, con IA", en: "Planned and led, with AI" },
+      subtitle: { es: "Hecho a mano, dirigido con IA", en: "Hand-built, directed with AI" },
       description: {
-        es: "La página que estás viendo: HTML, CSS y JavaScript, sin frameworks ni build. La construí con IA, pero la gracia no es usarla, sino usarla bien: yo pongo el plan, la arquitectura y el criterio —qué se hace, en qué orden, qué se queda fuera— y gestiono la implementación de principio a fin. Más de liderar un proyecto que de teclear. Y la web es solo la punta: lo mío de fondo es la ingeniería y los modelos, de los cuantitativos a los de IA. El código está abierto.",
-        en: "The page you're looking at: HTML, CSS and JavaScript, no frameworks or build step. I built it with AI —but the point isn't using it, it's using it well: I bring the plan, the architecture and the judgment —what gets done, in what order, what stays out— and manage the implementation end to end. More about leading a project than typing. And the web is just the surface: my real depth is engineering and models, from quant to AI. The code is open.",
+        es: "HTML, CSS y JS sin frameworks ni build. Lo monté con agentes; yo pongo el plan, la arquitectura y qué se queda fuera. Automatizar lo pesado, decidir lo importante. El código está abierto.",
+        en: "HTML, CSS and JS — no frameworks, no build. Built with agents; I bring the plan, the architecture, and what stays out. Automate the heavy lifting, decide what matters. Code is open.",
       },
       tags: ["Web", "Ingeniería", "Open source"],
-      stack: ["Python", "Ingeniería de datos", "Modelos cuantitativos", "IA"],
+      stack: ["HTML", "CSS", "JavaScript"],
       links: { repo: "https://github.com/cgomezfandino/cgomezfandino.github.io" },
       featured: false,
     },
@@ -236,8 +250,8 @@ window.PROFILE = {
   blog: {
     title: { es: "El blog", en: "The blog" },
     lead: {
-      es: "Aquí escribo lo que voy aprendiendo: notas sobre IA y construir productos, alguna lección que me costó cara y, de vez en cuando, una idea suelta que no me dejaba dormir. Sin corbata, en voz alta.",
-      en: "This is where I write down what I'm learning: notes on AI and building products, the occasional lesson that cost me dearly, and now and then a loose idea that wouldn't let me sleep. No tie, thinking out loud.",
+      es: "Aquí dejo notas sobre IA, producto y lo que voy aprendiendo al construir. Sin corbata: ideas, errores y alguna obsesión que no me deja dormir.",
+      en: "Notes on AI, product, and what I'm learning while building. No tie: ideas, mistakes, and the occasional obsession that won't let me sleep.",
     },
   },
 
@@ -245,14 +259,14 @@ window.PROFILE = {
   contactSection: {
     title: { es: "Escríbeme", en: "Get in touch" },
     lead: {
-      es: "Me encanta conocer gente y conversar sin agenda: datos e IA, una buena idea de producto, música, astrología, o simplemente ver qué podríamos construir juntos. Si llegaste hasta aquí, lánzate y escríbeme — respondo de verdad (y no soy un bot).",
-      en: "I love meeting people and talking with no agenda: data and AI, a good product idea, music, astrology, or just seeing what we could build together. If you made it this far, go ahead and write — I actually write back (and I'm not a bot).",
+      es: "Si tienes una idea de producto, un reto de datos o IA, o solo quieres charlar, escríbeme. Sin agenda. Respondo de verdad.",
+      en: "If you have a product idea, a data or AI challenge, or just want to chat, write me. No agenda. I actually reply.",
     },
   },
 
   footer: {
-    es: "Hecho con curiosidad, café y una guitarra cerca. Desde Madrid, con raíz colombiana. — Tato",
-    en: "Made with curiosity, coffee, and a guitar within reach. From Madrid, with Colombian roots. — Tato",
+    es: "Hecho con curiosidad y café. Madrid · raíz colombiana. — Tato",
+    en: "Made with curiosity and coffee. Madrid · Colombian roots. — Tato",
   },
 };
 
@@ -274,22 +288,25 @@ window.UI = {
     "section.projects": "Cosas que he construido",
     "section.blog": "El blog",
     "section.contact": "Contacto",
-    "blog.readmore": "Leer el blog",
+    "blog.readmore": "Ver el blog",
     "blog.readpost": "Leer",
     "modal.stack": "Stack",
     "modal.repo": "Ver código",
-    "modal.demo": "Ver demo",
+    "modal.demo": "Ver sitio",
+    "card.repo": "Código",
+    "card.demo": "Sitio",
+    "card.more": "Más detalle",
     "blog.eyebrow": "Bitácora",
     "blog.title": "El blog",
-    "blog.subtitle": "Notas sin corbata sobre IA, datos, producto y alguna idea suelta.",
+    "blog.subtitle": "Notas sobre IA, datos, producto y alguna idea suelta.",
     "blog.toc": "Contenido",
     "blog.related": "Sigue leyendo",
     "blog.count": "{n} notas",
     "blog.count_one": "{n} nota",
-    "blog.soon": "Aún no hay notas por aquí. Estoy preparando las primeras — vuelve pronto.",
+    "blog.soon": "Aún no hay notas. Cuando publique alguna, aparecerá aquí y podrás abrirla.",
     "blog.loading": "Cargando…",
     "blog.empty": "No hay posts en esta categoría.",
-    "blog.all_posts": "Todos los posts",
+    "blog.all_posts": "← Todas las notas",
     "blog.back": "← Volver al blog",
     "blog.home": "← Volver al inicio",
     "blog.read_error": "No se pudieron cargar los posts. Sirve el sitio por HTTP (p.ej. python3 -m http.server).",
@@ -318,23 +335,26 @@ window.UI = {
     "section.projects": "Things I've built",
     "section.blog": "The blog",
     "section.contact": "Contact",
-    "blog.readmore": "Read the blog",
+    "blog.readmore": "See the blog",
     "blog.readpost": "Read",
     "modal.stack": "Stack",
     "modal.repo": "View code",
-    "modal.demo": "View demo",
+    "modal.demo": "View site",
+    "card.repo": "Code",
+    "card.demo": "Site",
+    "card.more": "More detail",
     "blog.eyebrow": "Field notes",
     "blog.title": "The blog",
-    "blog.subtitle": "No-tie notes on AI, data, product and the occasional loose idea.",
+    "blog.subtitle": "Notes on AI, data, product and the occasional loose idea.",
     "blog.toc": "Contents",
     "blog.related": "Keep reading",
     "blog.count": "{n} notes",
     "blog.count_one": "{n} note",
-    "blog.soon": "No notes here yet. I'm working on the first ones — check back soon.",
+    "blog.soon": "No notes yet. When I publish one, it will show up here and you can open it.",
     "blog.loading": "Loading…",
     "blog.empty": "No posts in this category.",
-    "blog.all_posts": "All posts",
-    "blog.back": "← Back to blog",
+    "blog.all_posts": "← All notes",
+    "blog.back": "← Back to the blog",
     "blog.home": "← Back to home",
     "blog.read_error": "Couldn't load posts. Serve the site over HTTP (e.g. python3 -m http.server).",
     "post.not_found": "Post not found",

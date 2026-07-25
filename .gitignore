@@ -9,6 +9,9 @@ Thumbs.db
 # Logs / temp
 *.log
 
+# Superpowers brainstorm mockups (visuales temporales de diseño)
+.superpowers/
+
 # Privado — NO publicar (se mantienen en local)
 .private/
 CLAUDE.md
