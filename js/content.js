@@ -208,16 +208,16 @@ window.PROFILE = {
     {
       name: { es: "Voxnote", en: "Voxnote" },
       subtitle: {
-        es: "Reuniones → notas e insights, 100% local",
-        en: "Meetings → notes & insights, 100% local",
+        es: "Reuniones → notas e insights, 100% en tu navegador",
+        en: "Meetings → notes & insights, 100% in your browser",
       },
       description: {
-        es: "Pipeline privado para grabar reuniones, transcribirlas y sacar insights con un LLM —sin que el audio salga de tu máquina. Flujo: audio → Whisper → LLM → notas estructuradas. Diarización (quién dijo qué), CLI, interfaz web y API. Ollama u otros proveedores. Open source.",
-        en: "A private pipeline to record meetings, transcribe them, and pull insights with an LLM — audio never leaves your machine. Flow: audio → Whisper → LLM → structured notes. Diarization (who said what), CLI, web UI and API. Ollama or other providers. Open source.",
+        es: "App web de transcripción de reuniones con IA que corre entera en el navegador: Whisper local vía WebGPU (con fallback a CPU), transcripción offline en 8 idiomas y notas estructuradas con insights de LLM. Tu API key se guarda solo en tu navegador y el audio nunca sale de tu máquina. Proveedores configurables: OpenAI, Gemini, Claude, Z.ai, Kimi u Ollama. Además, pipeline local open source con diarización (quién dijo qué), CLI y API. Pruébala en voxnote.pages.dev.",
+        en: "AI meeting-transcription web app that runs entirely in the browser: local Whisper via WebGPU (CPU fallback), offline transcription in 8 languages, and structured notes with LLM insights. Your API key is stored only in your browser and audio never leaves your machine. Configurable providers: OpenAI, Gemini, Claude, Z.ai, Kimi, or Ollama. On top of that, an open-source local pipeline with diarization (who said what), CLI, and API. Try it live at voxnote.pages.dev.",
       },
-      tags: ["IA", "Local-first", "Open source"],
-      stack: ["Python", "FastAPI", "Next.js", "Whisper / whisperX", "Ollama"],
-      links: { repo: "https://github.com/cgomezfandino/voxnote" },
+      tags: ["IA", "Privacidad", "WebGPU", "Open source"],
+      stack: ["Whisper (in-browser)", "WebGPU", "Next.js", "Python", "FastAPI", "Ollama"],
+      links: { demo: "https://voxnote.pages.dev/", repo: "https://github.com/cgomezfandino/voxnote" },
       featured: true,
     },
     {
