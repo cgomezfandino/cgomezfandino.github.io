@@ -31,15 +31,15 @@ window.PROFILE = {
       en: ["AI & data architect", "I build AI products", "Data engineer", "Cosmos-curious"],
     },
     tagline: {
-      es: "Diseño y construyo productos de IA end-to-end —siempre con human in the loop—. Antes en Capital Markets; ahora en Northa y Containeer.",
-      en: "I design and build AI products end-to-end — always with humans in the loop. Formerly Capital Markets; now Northa and Containeer.",
+      es: "Diseño y construyo productos de IA end-to-end —siempre con human in the loop—. Antes en Capital Markets; ahora en Northa Center y Containeer.",
+      en: "I design and build AI products end-to-end — always with humans in the loop. Formerly Capital Markets; now Northa Center and Containeer.",
     },
     primaryCta: { es: "Mi historia", en: "My story" },
     secondaryCta: { es: "Hablemos", en: "Let's talk" },
     status: { es: "Disponible", en: "Available" },
     statusLine: {
-      es: [{ label: "rol", value: "AI & data architect" }, { label: "base", value: "Madrid, ES" }, { label: "foco", value: "Northa · Containeer" }],
-      en: [{ label: "role", value: "AI & data architect" }, { label: "based", value: "Madrid, ES" }, { label: "focus", value: "Northa · Containeer" }],
+      es: [{ label: "rol", value: "AI & data architect" }, { label: "base", value: "Madrid, ES" }, { label: "foco", value: "Northa Center · Containeer" }],
+      en: [{ label: "role", value: "AI & data architect" }, { label: "based", value: "Madrid, ES" }, { label: "focus", value: "Northa Center · Containeer" }],
     },
   },
 
@@ -146,8 +146,8 @@ window.PROFILE = {
         icon: "moon-stars",
         title: { es: "Astrología", en: "Astrology" },
         body: {
-          es: "La veo como un mapa de la persona, no como predicción. Sin dogma. Esa mirada alimenta Northa: cálculo serio, IA con criterio, y un humano cuando hace falta.",
-          en: "I see it as a map of the person, not as prediction. No dogma. That lens feeds Northa: serious calculation, AI with judgment, and a human when it matters.",
+          es: "La veo como un mapa de la persona, no como predicción. Sin dogma. Esa mirada alimenta Northa Center: cálculo serio, IA con criterio, y un humano cuando hace falta.",
+          en: "I see it as a map of the person, not as prediction. No dogma. That lens feeds Northa Center: serious calculation, AI with judgment, and a human when it matters.",
         },
       },
     ],
@@ -157,8 +157,8 @@ window.PROFILE = {
   building: {
     title: { es: "En qué ando ahora", en: "What I'm building now" },
     body: {
-      es: "Ahora mismo, dos productos end-to-end. Northa: carta, chat e informes para encontrar tu dirección —con profesional cuando hace falta. Containeer: ownership, transacciones y crédito CMBS en una sola inteligencia para CRE. Distintos, mismo hilo: menos fricción, human in the loop.",
-      en: "Right now, two end-to-end products. Northa: chart, chat and reports to find your direction — with a pro when you need one. Containeer: ownership, transactions and CMBS credit in one intelligence layer for CRE. Different problems, same thread: less friction, humans in the loop.",
+      es: "Ahora mismo, dos productos end-to-end. Northa Center: carta, chat e informes para encontrar tu dirección —con profesional cuando hace falta. Containeer: ownership, transacciones y crédito CMBS en una sola inteligencia para CRE. Distintos, mismo hilo: menos fricción, human in the loop.",
+      en: "Right now, two end-to-end products. Northa Center: chart, chat and reports to find your direction — with a pro when you need one. Containeer: ownership, transactions and CMBS credit in one intelligence layer for CRE. Different problems, same thread: less friction, humans in the loop.",
     },
   },
 
@@ -176,7 +176,7 @@ window.PROFILE = {
   projectsTitle: { es: "Cosas que he construido", en: "Things I've built" },
   projects: [
     {
-      name: { es: "Northa", en: "Northa" },
+      name: { es: "Northa Center", en: "Northa Center" },
       subtitle: {
         es: "Astrología psicológica + IA: encuentra tu dirección",
         en: "Psychological astrology + AI: find your direction",
