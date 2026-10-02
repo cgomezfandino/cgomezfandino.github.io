@@ -46,7 +46,9 @@
     const g = $('[data-i18n="hero.greeting"]'); if (g) g.textContent = t(P.hero.greeting);
     $("#hero-name").innerHTML = esc(t(P.hero.headline)) + (P.hero.alias ? ' <span class="hero-alias">(' + esc(P.hero.alias) + ')</span>' : "");
     $("#hero-tagline").textContent = t(P.hero.tagline);
-    const photo = $("#hero-photo"); photo.src = P.photo; photo.alt = (LANG === "es" ? "Foto de " : "Photo of ") + P.name;
+    const photo = $("#hero-photo");
+    photo.src = P.photo;
+    photo.alt = (LANG === "es" ? "Foto de " : "Photo of ") + (P.name || "");
 
     const ctas = $("#hero-ctas"); ctas.innerHTML = "";
     ctas.appendChild(Object.assign(el("a", "btn btn-primary", esc(t(P.hero.primaryCta)) + " " + ICONS.arrow), { href: "#story" }));
@@ -153,7 +155,7 @@
          <div class="project-stack">${stack}</div>
          ${projectCardActions(proj)}`;
       card.addEventListener("click", (e) => {
-        if (e.target.closest("[data-project-action]")) return;
+        if (e.target.closest("[data-project-action], a, button")) return;
         openModal(proj);
       });
       card.addEventListener("keydown", (e) => {
@@ -221,7 +223,10 @@
     if (!posts.length) {
       if (filters) { filters.hidden = true; filters.innerHTML = ""; }
       if (countEl) { countEl.hidden = true; countEl.textContent = ""; }
-      wrap.innerHTML = `<p class="blog-empty-msg">${esc(tt("blog.soon"))}</p>`;
+      wrap.innerHTML = `<p class="blog-empty-msg">${esc(tt("blog.soon"))}</p>
+        <div style="margin-top:1.5rem">
+          <a href="#contact" class="btn btn-ghost" style="font-size:.9rem">${esc(tt("nav.contact") || "Contacto")} →</a>
+        </div>`;
       return;
     }
 
@@ -326,7 +331,12 @@
     document.documentElement.lang = LANG;
     $$("[data-i18n]").forEach((n) => { const k = n.getAttribute("data-i18n"); if (UI[LANG] && UI[LANG][k] != null) n.textContent = UI[LANG][k]; });
     $$("[data-i18n-aria]").forEach((n) => { const k = n.getAttribute("data-i18n-aria"); if (UI[LANG] && UI[LANG][k] != null) n.setAttribute("aria-label", UI[LANG][k]); });
-    const lbl = $("#lang-label"); if (lbl) lbl.textContent = LANG.toUpperCase();
+    // Show active language + inactive, with dot on active
+    const lbl = $("#lang-label");
+    if (lbl) {
+      const other = LANG === "es" ? "EN" : "ES";
+      lbl.innerHTML = `<span style="text-decoration:underline;text-underline-offset:3px">${LANG.toUpperCase()}</span> · ${other}`;
+    }
   }
 
   function renderAll() {
@@ -361,8 +371,18 @@
     const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 16);
     onScroll(); window.addEventListener("scroll", onScroll, { passive: true });
     const menuBtn = $("#menu-toggle"), menu = $("#mobile-menu");
-    menuBtn.addEventListener("click", () => { const open = menu.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", String(open)); });
-    $$("#mobile-menu a").forEach((a) => a.addEventListener("click", () => { menu.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); }));
+    menuBtn.addEventListener("click", () => {
+      const open = menu.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menuBtn.innerHTML = open
+        ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>'
+        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>';
+    });
+    $$("#mobile-menu a").forEach((a) => a.addEventListener("click", () => {
+      menu.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>';
+    }));
 
     const ids = ["story", "passions", "building", "projects", "blog", "contact"];
     const links = $$('.nav-links .nav-link[href^="#"]');
