@@ -8,7 +8,7 @@
   --surface: #FFFFFF;
   --surface-alt: #F3EBE1;
   --ink: #1C1410;
-  --muted: #6B5D54;
+  --muted: #5A4E46;
   --border: #E4D8CB;
   --accent: #DC2626;
   --accent-strong: #991B1B; /* rojo seguro para texto pequeño sobre crema */
@@ -299,6 +299,13 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .featured-tag { position: absolute; top: 1.1rem; right: 1.1rem; font-family: var(--font-mono); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 0.4rem; background: var(--accent); color: var(--on-accent); }
 /* Destacado: ocupa todo el ancho como un titular editorial (evita la huérfana del grid impar) */
 .project-card.is-featured { grid-column: 1 / -1; }
+@media (max-width: 719px) {
+  .project-card.is-featured .featured-tag {
+    position: static;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+}
 @media (min-width: 720px) {
   .project-card.is-featured {
     display: grid;
@@ -371,10 +378,14 @@ footer { border-top: 1px solid var(--border); padding: 3.5rem 0; background: var
 .footer-brand { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--ink); }
 .footer-inner .note { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--ink); max-width: 34rem; line-height: 1.5; margin: 0; }
 .footer-socials { display: flex; gap: 0.7rem; }
-#footer-copy { font-family: var(--font-mono); font-size: 0.8rem; margin: 0; }
+#footer-copy { font-family: var(--font-mono); font-size: 0.72rem; margin: 0; margin-top: 0.6rem; }
 .footer-top { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.04em; color: var(--muted); text-decoration: none; border: 1px solid var(--border); border-radius: 999px; padding: 0.4rem 0.9rem; transition: all 0.2s; }
 .footer-top:hover { color: var(--accent-strong); border-color: var(--accent); }
 .dark .footer-top:hover { color: var(--accent); }
+
+/* ---- Dark-mode tweaks ---- */
+/* Portrait frame: less saturated in dark mode */
+.dark .portrait-frame { opacity: 0.3; }
 
 /* ---- Modal ---- */
 .modal { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center; padding: 1rem; }
@@ -387,6 +398,9 @@ footer { border-top: 1px solid var(--border); padding: 3.5rem 0; background: var
 /* ---- Reveal ---- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}
 
 /* =========================================================================
  *  Sistema de tarjetas unificado (editorial-tech)
